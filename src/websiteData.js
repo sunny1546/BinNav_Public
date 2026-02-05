@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/5 22:43:46
+// 网站数据 - 通过管理后台更新于 2026/2/5 23:26:58
 
 // 站点配置
 export const siteConfig = {
@@ -6,7 +6,7 @@ export const siteConfig = {
   "siteTitle": "问安-分享",
   "siteLogo": "/assets/logo.png",
   "siteDescription": "个人使用分享站",
-  "icpRecord": "",
+  "icpRecord": "黔ICP备2026000366号-1",
   "publicSecurityRecord": "",
   "publicSecurityRecordUrl": ""
 };
