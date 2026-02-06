@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/6 21:28:07
+// 网站数据 - 通过管理后台更新于 2026/2/6 21:32:52
 
 // 站点配置
 export const siteConfig = {
@@ -966,7 +966,7 @@ export const categories = [
   {
     "id": "author",
     "name": "作者专栏",
-    "icon": "/assets/____.png",
+    "icon": "/assets/tools_icon.png",
     "special": true,
     "subcategories": []
   },
