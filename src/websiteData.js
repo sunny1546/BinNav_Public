@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/5 23:26:58
+// 网站数据 - 通过管理后台更新于 2026/2/6 21:28:07
 
 // 站点配置
 export const siteConfig = {
@@ -6,7 +6,7 @@ export const siteConfig = {
   "siteTitle": "问安-分享",
   "siteLogo": "/assets/logo.png",
   "siteDescription": "个人使用分享站",
-  "icpRecord": "黔ICP备2026000366号-1",
+  "icpRecord": "",
   "publicSecurityRecord": "",
   "publicSecurityRecordUrl": ""
 };
@@ -21,7 +21,7 @@ export const websiteData = [
     "tags": [
       "博客"
     ],
-    "icon": "https://icon.nbvil.com/favicon?url=us.kg"
+    "icon": "https://icon.nbvil.com/favicon?url=sunny46.us.kg"
   },
   {
     "id": 1770300855101,
@@ -1193,5 +1193,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-05"
+  lastUpdated: "2026-02-06"
 };
