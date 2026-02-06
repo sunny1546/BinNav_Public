@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/6 21:32:52
+// 网站数据 - 通过管理后台更新于 2026/2/6 21:56:31
 
 // 站点配置
 export const siteConfig = {
@@ -966,7 +966,7 @@ export const categories = [
   {
     "id": "author",
     "name": "作者专栏",
-    "icon": "/assets/tools_icon.png",
+    "icon": "/assets/____.png",
     "special": true,
     "subcategories": []
   },
@@ -979,176 +979,197 @@ export const categories = [
       {
         "id": "category_1770300344563",
         "name": "AI学习",
-        "icon": "/assets/____.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300358965",
         "name": "常用AI",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       }
     ]
   },
   {
     "id": "category_1770300388191",
     "name": "资源分享",
-    "icon": "/assets/tools_icon.png",
+    "icon": "/assets/163___.png",
     "special": false,
     "subcategories": [
       {
         "id": "category_1770300419548",
         "name": "导航站",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300432138",
         "name": "分享站",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300523587",
         "name": "网盘资源",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300535971",
         "name": "书籍资源",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300556431",
         "name": "其它资源",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       }
     ]
   },
   {
     "id": "category_1751807929795",
     "name": "人工智能",
-    "icon": "/assets/ai.png",
+    "icon": "/assets/163___.png",
     "special": false,
     "subcategories": [
       {
         "id": "category_1770300581787",
         "name": "AI编程",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300599053",
         "name": "AI其它",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       }
     ]
   },
   {
     "id": "category_1770300613701",
     "name": "电脑相关",
-    "icon": "/assets/tools_icon.png",
+    "icon": "/assets/163___.png",
     "special": false,
     "subcategories": [
       {
         "id": "category_1770300624704",
         "name": "软件",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300635754",
         "name": "工具",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300645523",
         "name": "插件脚本",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300655566",
         "name": "电脑其它",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300665675",
         "name": "域名服务器",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       }
     ]
   },
   {
     "id": "category_1770300678258",
     "name": "休闲娱乐",
-    "icon": "/assets/tools_icon.png",
+    "icon": "/assets/163___.png",
     "special": false,
     "subcategories": [
       {
         "id": "category_1770300686897",
         "name": "音乐",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300697514",
         "name": "小说",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       }
     ]
   },
   {
     "id": "category_1770300707942",
     "name": "折腾学习",
-    "icon": "/assets/tools_icon.png",
+    "icon": "/assets/163___.png",
     "special": false,
     "subcategories": [
       {
         "id": "category_1770300715634",
         "name": "折腾",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300724503",
         "name": "学习",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300734553",
         "name": "其它链接",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       }
     ]
   },
   {
     "id": "category_1770300748805",
     "name": "科学上网",
-    "icon": "/assets/tools_icon.png",
+    "icon": "/assets/163___.png",
     "special": false,
     "subcategories": [
       {
         "id": "category_1770300757443",
         "name": "机场",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       },
       {
         "id": "category_1770300765705",
         "name": "黑科技",
-        "icon": "/assets/tools_icon.png",
-        "special": false
+        "icon": "/assets/163___.png",
+        "special": false,
+        "subcategories": []
       }
     ]
   }
