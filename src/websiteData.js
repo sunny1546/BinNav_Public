@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/6 22:04:04
+// 网站数据 - 通过管理后台更新于 2026/2/7 16:45:55
 
 // 站点配置
 export const siteConfig = {
@@ -65,7 +65,7 @@ export const websiteData = [
     "tags": [
       "AI聚合"
     ],
-    "icon": "/assets/logo.png"
+    "icon": "https://icon.nbvil.com/favicon?url=www.chatopens.com"
   },
   {
     "id": 1770300953694,
@@ -773,6 +773,17 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=www.w3school.com.cn"
   },
   {
+    "id": 1770453874506,
+    "name": "Codecrafters-io",
+    "description": "开发学习站，有免费有付费",
+    "url": "https://github.com/codecrafters-io",
+    "category": "category_1770300724503",
+    "tags": [
+      "开发学习"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=github.com"
+  },
+  {
     "id": 1770302333125,
     "name": "考公资源合集",
     "description": "考公资源文档分享",
@@ -1214,5 +1225,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-06"
+  lastUpdated: "2026-02-07"
 };
