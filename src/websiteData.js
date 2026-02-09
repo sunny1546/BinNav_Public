@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/9 11:21:00
+// 网站数据 - 通过管理后台更新于 2026/2/9 11:21:59
 
 // 站点配置
 export const siteConfig = {
@@ -1012,6 +1012,12 @@ export const categories = [
         "icon": "/assets/163___.png",
         "special": false,
         "subcategories": []
+      },
+      {
+        "id": "category_1770607315378",
+        "name": "其它常用",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   },
