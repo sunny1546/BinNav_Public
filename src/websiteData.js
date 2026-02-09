@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/9 11:21:59
+// 网站数据 - 通过管理后台更新于 2026/2/9 16:40:20
 
 // 站点配置
 export const siteConfig = {
@@ -22,6 +22,17 @@ export const websiteData = [
       "博客"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=sunny46.us.kg"
+  },
+  {
+    "id": 1770626412964,
+    "name": "Obsidian",
+    "description": "我的笔记",
+    "url": "https://api.xv46.dpdns.org/",
+    "category": "author",
+    "tags": [
+      "我的笔记"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=api.xv46.dpdns.org"
   },
   {
     "id": 1770300855101,
