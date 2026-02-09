@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/7 16:45:55
+// 网站数据 - 通过管理后台更新于 2026/2/9 11:21:00
 
 // 站点配置
 export const siteConfig = {
@@ -99,6 +99,18 @@ export const websiteData = [
       "AI工具"
     ],
     "icon": "/assets/logo.png"
+  },
+  {
+    "id": 1770607255188,
+    "name": "Prompt-optimizer",
+    "description": "AI提示词优化器",
+    "url": "https://github.com/linshenkx/prompt-optimizer?enable_bottom_share_style=1&hybrid_event_param=HybridEventParams(enterMethod=message_markdown_url, localPage=chat, chatType=default, duration=0, isRichMediaPictureLink=false, mobMap={message_id=37679158797290242, previous_page=landing, is_immersive_background=0, chat_type=default, reply_id=37679158797288962, enter_method=landing, conversation_id=37415682963748354, enter_chat_method=landing, bot_id=7234781073513644036, current_page=chat}, extra=null)&use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+    "category": "category_1770300358965",
+    "tags": [
+      "AI工具",
+      "提示词"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
     "id": 1770301027270,
@@ -1225,5 +1237,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-07"
+  lastUpdated: "2026-02-09"
 };
