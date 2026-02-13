@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/9 16:40:20
+// 网站数据 - 通过管理后台更新于 2026/2/13 20:18:13
 
 // 站点配置
 export const siteConfig = {
@@ -122,6 +122,18 @@ export const websiteData = [
       "提示词"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
+  },
+  {
+    "id": 1770984994337,
+    "name": "Z-Library",
+    "description": "z-library官网",
+    "url": "https://z-library.sk/?ts=1514",
+    "category": "category_1770607315378",
+    "tags": [
+      "zlibrary",
+      "官网"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=z-library.sk"
   },
   {
     "id": 1770301027270,
@@ -1254,5 +1266,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-09"
+  lastUpdated: "2026-02-13"
 };
