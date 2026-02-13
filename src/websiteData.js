@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/13 20:18:13
+// 网站数据 - 通过管理后台更新于 2026/2/13 20:34:11
 
 // 站点配置
 export const siteConfig = {
@@ -422,6 +422,17 @@ export const websiteData = [
       "即时回答"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.eye2.ai"
+  },
+  {
+    "id": 1770986033722,
+    "name": "NotebookLM",
+    "description": "上传文档ai解析，限制在文档内建立知识库",
+    "url": "https://notebooklm.google.com/?icid=home_maincta&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1",
+    "category": "category_1770300599053",
+    "tags": [
+      "AI工具"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=google.com"
   },
   {
     "id": 1770301616410,
