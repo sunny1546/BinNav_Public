@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/13 20:34:11
+// 网站数据 - 通过管理后台更新于 2026/2/18 10:47:33
 
 // 站点配置
 export const siteConfig = {
@@ -830,6 +830,17 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
+    "id": 1771382848270,
+    "name": "Englearne",
+    "description": "英文学习大全",
+    "url": "https://www.englearner.site/cn/index.html",
+    "category": "category_1770300724503",
+    "tags": [
+      "英语学习"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.englearner.site"
+  },
+  {
     "id": 1770302333125,
     "name": "考公资源合集",
     "description": "考公资源文档分享",
@@ -1277,5 +1288,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-13"
+  lastUpdated: "2026-02-18"
 };
