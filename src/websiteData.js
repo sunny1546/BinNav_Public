@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/18 10:47:33
+// 网站数据 - 通过管理后台更新于 2026/2/19 10:48:25
 
 // 站点配置
 export const siteConfig = {
@@ -293,6 +293,17 @@ export const websiteData = [
       "书籍下载"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=qcenglish.com"
+  },
+  {
+    "id": 1771469301196,
+    "name": "教材下载",
+    "description": "所有小初高、大学PDF教材",
+    "url": "https://github.com/TapXWorld/ChinaTextbook",
+    "category": "category_1770300535971",
+    "tags": [
+      "教材下载"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
     "id": 1770301371308,
@@ -1288,5 +1299,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-18"
+  lastUpdated: "2026-02-19"
 };
