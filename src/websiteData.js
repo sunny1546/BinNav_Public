@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/23 15:35:38
+// 网站数据 - 通过管理后台更新于 2026/2/27 15:41:01
 
 // 站点配置
 export const siteConfig = {
@@ -628,6 +628,18 @@ export const websiteData = [
       "文件转换"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=tools.pdf24.org"
+  },
+  {
+    "id": 1772178060574,
+    "name": "图片转excel",
+    "description": "超级好用的图片转excel",
+    "url": "https://toexcel.zhiyakeji.com/",
+    "category": "category_1770300635754",
+    "tags": [
+      "图片",
+      "转excel"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770301932268,
@@ -1311,5 +1323,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-23"
+  lastUpdated: "2026-02-27"
 };
