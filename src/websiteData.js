@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/27 15:41:01
+// 网站数据 - 通过管理后台更新于 2026/2/27 15:48:57
 
 // 站点配置
 export const siteConfig = {
@@ -874,6 +874,18 @@ export const websiteData = [
       "英语学习"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.englearner.site"
+  },
+  {
+    "id": 1772178533416,
+    "name": "Class Central",
+    "description": "名校技能课程大全，提升技能必备网站",
+    "url": "https://www.classcentral.com/",
+    "category": "category_1770300724503",
+    "tags": [
+      "学习",
+      "课程"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.classcentral.com"
   },
   {
     "id": 1770302333125,
