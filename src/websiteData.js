@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/2 15:28:32
+// 网站数据 - 通过管理后台更新于 2026/3/2 15:48:02
 
 // 站点配置
 export const siteConfig = {
@@ -147,6 +147,18 @@ export const websiteData = [
       "图文生成"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.easymakeai.com"
+  },
+  {
+    "id": 1772437677121,
+    "name": "happycapy",
+    "description": "AI工具大全",
+    "url": "https://happycapy.ai/",
+    "category": "category_1770300358965",
+    "tags": [
+      "AI工具",
+      "自动化"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=happycapy.ai"
   },
   {
     "id": 1770984994337,
