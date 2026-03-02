@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/2 15:48:02
+// 网站数据 - 通过管理后台更新于 2026/3/2 16:36:03
 
 // 站点配置
 export const siteConfig = {
@@ -677,6 +677,19 @@ export const websiteData = [
       "转excel"
     ],
     "icon": "/assets/logo.png"
+  },
+  {
+    "id": 1772440556385,
+    "name": "文颜",
+    "description": "Mardown排版工具",
+    "url": "https://yuzhi.tech/wenyan",
+    "category": "category_1770300635754",
+    "tags": [
+      "排版工具",
+      "微信",
+      "公众号"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=yuzhi.tech"
   },
   {
     "id": 1770301932268,
