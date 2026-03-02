@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/2 15:13:09
+// 网站数据 - 通过管理后台更新于 2026/3/2 15:28:32
 
 // 站点配置
 export const siteConfig = {
@@ -66,6 +66,18 @@ export const websiteData = [
       "后端管理"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=supabase.com"
+  },
+  {
+    "id": 1772436501256,
+    "name": "OpenClaw 101",
+    "description": "OpenClaw学习网站，七天系统掌握openclaw，打造属于你的AI私人助理",
+    "url": "https://openclaw101.dev/",
+    "category": "category_1770300344563",
+    "tags": [
+      "openclaw",
+      "AI学习"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=openclaw101.dev"
   },
   {
     "id": 1770300929558,
