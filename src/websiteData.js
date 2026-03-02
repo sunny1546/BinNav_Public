@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/2/27 15:48:57
+// 网站数据 - 通过管理后台更新于 2026/3/2 15:13:09
 
 // 站点配置
 export const siteConfig = {
@@ -122,6 +122,19 @@ export const websiteData = [
       "提示词"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
+  },
+  {
+    "id": 1772435580803,
+    "name": "EasyMakeAl",
+    "description": "粘贴Youtube/Bilibili链接自动生成小红书图文/微信公众号文章",
+    "url": "https://www.easymakeai.com/dashboard",
+    "category": "category_1770300358965",
+    "tags": [
+      "AI工具",
+      "自动化",
+      "图文生成"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.easymakeai.com"
   },
   {
     "id": 1770984994337,
@@ -1335,5 +1348,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-02-27"
+  lastUpdated: "2026-03-02"
 };
