@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/8 09:53:44
+// 网站数据 - 通过管理后台更新于 2026/3/8 09:55:39
 
 // 站点配置
 export const siteConfig = {
@@ -33,6 +33,18 @@ export const websiteData = [
       "我的笔记"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=api.xv46.dpdns.org"
+  },
+  {
+    "id": 1772934933612,
+    "name": "obsidian一键发布公众号插件",
+    "description": "在obsidian编辑，选择主题，一键发布到微信公众号",
+    "url": "https://github.com/joeytoday/obsidian-mp-publisher",
+    "category": "category_1772934730594",
+    "tags": [
+      "obsidian插件",
+      "公众号"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
     "id": 1770300855101,
