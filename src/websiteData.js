@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/8 10:02:58
+// 网站数据 - 通过管理后台更新于 2026/3/8 11:54:27
 
 // 站点配置
 export const siteConfig = {
@@ -505,6 +505,19 @@ export const websiteData = [
       "AI工具"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=google.com"
+  },
+  {
+    "id": 1772942053448,
+    "name": "SkillSmp",
+    "description": "现有skill合集，让agent能够更专业的干活",
+    "url": "https://skillsmp.com/",
+    "category": "category_1770300599053",
+    "tags": [
+      "AI",
+      "skill",
+      "agent"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=skillsmp.com"
   },
   {
     "id": 1770301616410,
