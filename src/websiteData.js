@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/8 09:55:39
+// 网站数据 - 通过管理后台更新于 2026/3/8 10:02:58
 
 // 站点配置
 export const siteConfig = {
@@ -37,7 +37,7 @@ export const websiteData = [
   {
     "id": 1772934933612,
     "name": "obsidian一键发布公众号插件",
-    "description": "在obsidian编辑，选择主题，一键发布到微信公众号",
+    "description": "在obsidian编辑，选择主题，一键发布到微信公众号\n\n公众号推荐原文：https://mp.weixin.qq.com/s/DzGFNWTy38gYk5VEwIDTFA?scene=1&click_id=2",
     "url": "https://github.com/joeytoday/obsidian-mp-publisher",
     "category": "category_1772934730594",
     "tags": [
