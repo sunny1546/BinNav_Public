@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/2 16:36:03
+// 网站数据 - 通过管理后台更新于 2026/3/8 09:52:34
 
 // 站点配置
 export const siteConfig = {
@@ -13,26 +13,26 @@ export const siteConfig = {
 
 export const websiteData = [
   {
-    "id": 1770300833623,
-    "name": "我的博客",
-    "description": "我的个人博客",
-    "url": "https://sunny46.us.kg",
-    "category": "author",
-    "tags": [
-      "博客"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=sunny46.us.kg"
-  },
-  {
     "id": 1770626412964,
     "name": "Obsidian",
     "description": "我的笔记",
     "url": "https://api.xv46.dpdns.org/",
-    "category": "author",
+    "category": "category_1772934696506",
     "tags": [
       "我的笔记"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=api.xv46.dpdns.org"
+  },
+  {
+    "id": 1770300833623,
+    "name": "我的博客",
+    "description": "我的个人博客",
+    "url": "https://sunny46.us.kg",
+    "category": "category_1772934696506",
+    "tags": [
+      "博客"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=sunny46.us.kg"
   },
   {
     "id": 1770300855101,
@@ -1133,7 +1133,20 @@ export const categories = [
     "name": "作者专栏",
     "icon": "/assets/____.png",
     "special": true,
-    "subcategories": []
+    "subcategories": [
+      {
+        "id": "category_1772934696506",
+        "name": "我的站点",
+        "icon": "/assets/163___.png",
+        "special": false
+      },
+      {
+        "id": "category_1772934730594",
+        "name": "我的收藏",
+        "icon": "/assets/163___.png",
+        "special": false
+      }
+    ]
   },
   {
     "id": "recommended",
@@ -1385,5 +1398,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-02"
+  lastUpdated: "2026-03-08"
 };
