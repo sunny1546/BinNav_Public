@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/17 15:23:42
+// 网站数据 - 通过管理后台更新于 2026/3/17 16:51:36
 
 // 站点配置
 export const siteConfig = {
@@ -103,15 +103,15 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=openclaw101.dev"
   },
   {
-    "id": 1770300929558,
-    "name": "ChatOpens",
-    "description": "免费AI聚合站-国内可用",
-    "url": "https://www.ChatOpens.com",
+    "id": 1770301002468,
+    "name": "阿川ai",
+    "description": "集合各类ai模型的网站",
+    "url": "https://achuanai.vip/auth",
     "category": "category_1770300358965",
     "tags": [
-      "AI聚合"
+      "AI工具"
     ],
-    "icon": "https://icon.nbvil.com/favicon?url=www.chatopens.com"
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770300953694,
@@ -136,15 +136,15 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=lmarena.ai"
   },
   {
-    "id": 1770301002468,
-    "name": "阿川ai",
-    "description": "集合各类ai模型的网站",
-    "url": "https://achuanai.vip/auth",
+    "id": 1770300929558,
+    "name": "ChatOpens",
+    "description": "免费AI聚合站-国内可用",
+    "url": "https://www.ChatOpens.com",
     "category": "category_1770300358965",
     "tags": [
-      "AI工具"
+      "AI聚合"
     ],
-    "icon": "/assets/logo.png"
+    "icon": "https://icon.nbvil.com/favicon?url=www.chatopens.com"
   },
   {
     "id": 1770607255188,
