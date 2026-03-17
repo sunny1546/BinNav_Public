@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/17 15:23:16
+// 网站数据 - 通过管理后台更新于 2026/3/17 15:23:42
 
 // 站点配置
 export const siteConfig = {
@@ -14,7 +14,7 @@ export const siteConfig = {
 export const websiteData = [
   {
     "id": 1773732161930,
-    "name": "心悦搜索后台管理",
+    "name": "心悦后台管理",
     "description": "我的网盘小说搜索站",
     "url": "https://an46.us.kg/qfadmin/admin/login/?callback=%2Fqfadmin%2Fconf%2Fbase",
     "category": "author",
