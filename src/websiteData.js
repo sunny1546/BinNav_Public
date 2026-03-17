@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/8 11:54:27
+// 网站数据 - 通过管理后台更新于 2026/3/17 15:23:16
 
 // 站点配置
 export const siteConfig = {
@@ -12,6 +12,17 @@ export const siteConfig = {
 };
 
 export const websiteData = [
+  {
+    "id": 1773732161930,
+    "name": "心悦搜索后台管理",
+    "description": "我的网盘小说搜索站",
+    "url": "https://an46.us.kg/qfadmin/admin/login/?callback=%2Fqfadmin%2Fconf%2Fbase",
+    "category": "author",
+    "tags": [
+      "我的小说"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=an46.us.kg"
+  },
   {
     "id": 1770300833623,
     "name": "我的博客",
@@ -1423,5 +1434,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-08"
+  lastUpdated: "2026-03-17"
 };
