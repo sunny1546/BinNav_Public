@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/22 22:13:58
+// 网站数据 - 通过管理后台更新于 2026/3/22 22:16:33
 
 // 站点配置
 export const siteConfig = {
@@ -34,6 +34,17 @@ export const websiteData = [
       "我的笔记"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=api.xv46.dpdns.org"
+  },
+  {
+    "id": 1774188986294,
+    "name": "小说搜索站",
+    "description": "我搭建的小说资源搜索站",
+    "url": "https://me46.us.kg/",
+    "category": "category_1772934696506",
+    "tags": [
+      "小说搜索"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=me46.us.kg"
   },
   {
     "id": 1772934933612,
