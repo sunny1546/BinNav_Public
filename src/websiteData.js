@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/17 16:59:11
+// 网站数据 - 通过管理后台更新于 2026/3/22 21:26:14
 
 // 站点配置
 export const siteConfig = {
@@ -45,17 +45,6 @@ export const websiteData = [
       "我的小说"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=an46.us.kg"
-  },
-  {
-    "id": 1770300833623,
-    "name": "我的博客",
-    "description": "我的个人博客",
-    "url": "https://sunny46.us.kg",
-    "category": "category_1772934696506",
-    "tags": [
-      "博客"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=sunny46.us.kg"
   },
   {
     "id": 1772934933612,
@@ -1446,5 +1435,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-17"
+  lastUpdated: "2026-03-22"
 };
