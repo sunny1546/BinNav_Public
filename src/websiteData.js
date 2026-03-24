@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/22 22:16:33
+// 网站数据 - 通过管理后台更新于 2026/3/24 19:21:23
 
 // 站点配置
 export const siteConfig = {
@@ -530,6 +530,18 @@ export const websiteData = [
       "agent"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=skillsmp.com"
+  },
+  {
+    "id": 1774351278871,
+    "name": "AI提效雷达站",
+    "description": "高效使用AI提效指南",
+    "url": "https://dairadar.cn/",
+    "category": "category_1770300599053",
+    "tags": [
+      "AI指南",
+      "AI提效"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=dairadar.cn"
   },
   {
     "id": 1770301616410,
@@ -1435,5 +1447,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-22"
+  lastUpdated: "2026-03-24"
 };
