@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/24 19:21:23
+// 网站数据 - 通过管理后台更新于 2026/3/27 18:19:26
 
 // 站点配置
 export const siteConfig = {
@@ -987,6 +987,18 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=www.classcentral.com"
   },
   {
+    "id": 1774606760751,
+    "name": "Easy-Vibe",
+    "description": "一款在线学习vibe-coding的网站",
+    "url": "https://datawhalechina.github.io/easy-vibe/en/",
+    "category": "category_1770300724503",
+    "tags": [
+      "学习",
+      "vibe coding"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=datawhalechina.github.io"
+  },
+  {
     "id": 1770302333125,
     "name": "考公资源合集",
     "description": "考公资源文档分享",
@@ -1447,5 +1459,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-24"
+  lastUpdated: "2026-03-27"
 };
