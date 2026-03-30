@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/27 18:19:26
+// 网站数据 - 通过管理后台更新于 2026/3/30 16:35:03
 
 // 站点配置
 export const siteConfig = {
@@ -542,6 +542,18 @@ export const websiteData = [
       "AI提效"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=dairadar.cn"
+  },
+  {
+    "id": 1774859699765,
+    "name": "ReflyAi",
+    "description": "通过提示词一键搭建自动化工作流程",
+    "url": "https://refly.ai/workspace",
+    "category": "category_1770300599053",
+    "tags": [
+      "AI",
+      "工作流"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=refly.ai"
   },
   {
     "id": 1770301616410,
@@ -1459,5 +1471,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-27"
+  lastUpdated: "2026-03-30"
 };
