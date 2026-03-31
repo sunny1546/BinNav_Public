@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/30 16:35:03
+// 网站数据 - 通过管理后台更新于 2026/3/31 16:45:59
 
 // 站点配置
 export const siteConfig = {
@@ -554,6 +554,18 @@ export const websiteData = [
       "工作流"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=refly.ai"
+  },
+  {
+    "id": 1774946754199,
+    "name": "OpenClaw官网",
+    "description": "openclaw官方安装教程",
+    "url": "https://openclaw.ai/",
+    "category": "category_1770300599053",
+    "tags": [
+      "openclaw",
+      "官网"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=openclaw.ai"
   },
   {
     "id": 1770301616410,
@@ -1471,5 +1483,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-30"
+  lastUpdated: "2026-03-31"
 };
