@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/1 18:59:50
+// 网站数据 - 通过管理后台更新于 2026/4/1 20:04:15
 
 // 站点配置
 export const siteConfig = {
@@ -45,6 +45,17 @@ export const websiteData = [
       "小说搜索"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=me46.us.kg"
+  },
+  {
+    "id": 1775045050683,
+    "name": "我的节点",
+    "description": "我的自建机场节点",
+    "url": "https://an46.us.ci/login",
+    "category": "category_1772934696506",
+    "tags": [
+      "我的机场"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1772934933612,
