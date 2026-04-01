@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/3/31 16:45:59
+// 网站数据 - 通过管理后台更新于 2026/4/1 18:59:37
 
 // 站点配置
 export const siteConfig = {
@@ -854,6 +854,18 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=dash.cloudflare.com"
   },
   {
+    "id": 1775041173299,
+    "name": "Dnshe",
+    "description": "免费域名",
+    "url": "https://www.dnshe.com/",
+    "category": "category_1770300665675",
+    "tags": [
+      "免费",
+      "域名"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.dnshe.com"
+  },
+  {
     "id": 1770302113300,
     "name": "在线音乐",
     "description": "在线音乐",
@@ -1483,5 +1495,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-03-31"
+  lastUpdated: "2026-04-01"
 };
