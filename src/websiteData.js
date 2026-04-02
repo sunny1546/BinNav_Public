@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/1 21:50:57
+// 网站数据 - 通过管理后台更新于 2026/4/3 03:02:08
 
 // 站点配置
 export const siteConfig = {
@@ -206,6 +206,18 @@ export const websiteData = [
       "官网"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=z-library.sk"
+  },
+  {
+    "id": 1775156523179,
+    "name": "Aixor",
+    "description": "openai的订阅，19/月",
+    "url": "https://aixor.org/",
+    "category": "category_1770607315378",
+    "tags": [
+      "openai",
+      "订阅"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=aixor.org"
   },
   {
     "id": 1770301027270,
@@ -1506,5 +1518,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-01"
+  lastUpdated: "2026-04-02"
 };
