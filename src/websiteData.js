@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/3 21:49:42
+// 网站数据 - 通过管理后台更新于 2026/4/4 01:42:19
 
 // 站点配置
 export const siteConfig = {
@@ -785,6 +785,18 @@ export const websiteData = [
       "公众号"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=yuzhi.tech"
+  },
+  {
+    "id": 1775238131732,
+    "name": "沉浸式写作",
+    "description": "一款共享赛博自习室",
+    "url": "https://flow-space-v1.vercel.app/",
+    "category": "category_1770300635754",
+    "tags": [
+      "写作",
+      "工具"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=flow-space-v1.vercel.app"
   },
   {
     "id": 1770301932268,
