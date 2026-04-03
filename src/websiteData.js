@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/3 19:11:28
+// 网站数据 - 通过管理后台更新于 2026/4/3 21:49:42
 
 // 站点配置
 export const siteConfig = {
@@ -12,18 +12,6 @@ export const siteConfig = {
 };
 
 export const websiteData = [
-  {
-    "id": 1773737855230,
-    "name": "我的飞书文档",
-    "description": "个人飞书知识库",
-    "url": "https://my.feishu.cn/wiki/OT8ZwbucGivzzbkscBZc81pznZd",
-    "category": "category_1772934696506",
-    "tags": [
-      "我的飞书",
-      "知识库"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=my.feishu.cn"
-  },
   {
     "id": 1770626412964,
     "name": "Obsidian",
