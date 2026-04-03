@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/3 03:02:08
+// 网站数据 - 通过管理后台更新于 2026/4/3 19:11:28
 
 // 站点配置
 export const siteConfig = {
@@ -56,6 +56,17 @@ export const websiteData = [
       "我的机场"
     ],
     "icon": "/assets/logo.png"
+  },
+  {
+    "id": 1775214681779,
+    "name": "我的图床",
+    "description": "个人搭建的自用图床",
+    "url": "https://img46.us.ci/",
+    "category": "category_1772934696506",
+    "tags": [
+      "我的图床"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=img46.us.ci"
   },
   {
     "id": 1772934933612,
@@ -1518,5 +1529,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-02"
+  lastUpdated: "2026-04-03"
 };
