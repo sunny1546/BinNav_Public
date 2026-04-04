@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/4 01:42:19
+// 网站数据 - 通过管理后台更新于 2026/4/4 16:19:32
 
 // 站点配置
 export const siteConfig = {
@@ -1080,6 +1080,17 @@ export const websiteData = [
     "icon": "/assets/logo.png"
   },
   {
+    "id": 1775290767575,
+    "name": "ShaderToy",
+    "description": "提供图像视频代码的网站，适合vibecoding参考",
+    "url": "https://www.shadertoy.com/",
+    "category": "category_1775290655068",
+    "tags": [
+      "vibecoding"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.shadertoy.com"
+  },
+  {
     "id": 1770302354344,
     "name": "疾风云",
     "description": "比较稳定",
@@ -1463,6 +1474,12 @@ export const categories = [
         "icon": "/assets/163___.png",
         "special": false,
         "subcategories": []
+      },
+      {
+        "id": "category_1775290655068",
+        "name": "vibe coding",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   },
@@ -1529,5 +1546,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-03"
+  lastUpdated: "2026-04-04"
 };
