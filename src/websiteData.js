@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/4 16:48:23
+// 网站数据 - 通过管理后台更新于 2026/4/5 00:55:22
 
 // 站点配置
 export const siteConfig = {
@@ -55,6 +55,18 @@ export const websiteData = [
       "我的图床"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=img46.us.ci"
+  },
+  {
+    "id": 1775321660215,
+    "name": "Immersive Writing",
+    "description": "我的vibe coding项目-沉浸式写作，让情绪得到安放",
+    "url": "https://www.an46.us.kg/",
+    "category": "category_1772934696506",
+    "tags": [
+      "我的",
+      "vibe coding"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.an46.us.kg"
   },
   {
     "id": 1772934933612,
