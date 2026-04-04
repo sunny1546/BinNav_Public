@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/4 16:19:32
+// 网站数据 - 通过管理后台更新于 2026/4/4 16:23:50
 
 // 站点配置
 export const siteConfig = {
@@ -1082,7 +1082,7 @@ export const websiteData = [
   {
     "id": 1775290767575,
     "name": "ShaderToy",
-    "description": "提供图像视频代码的网站，适合vibecoding参考",
+    "description": "vibecoding灵感网站",
     "url": "https://www.shadertoy.com/",
     "category": "category_1775290655068",
     "tags": [
