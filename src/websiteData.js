@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/4 16:30:56
+// 网站数据 - 通过管理后台更新于 2026/4/4 16:39:14
 
 // 站点配置
 export const siteConfig = {
@@ -469,18 +469,6 @@ export const websiteData = [
       "AI编程"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
-  },
-  {
-    "id": 1771832132817,
-    "name": "Vibe Vibe",
-    "description": "人人都能学会 AI 编程",
-    "url": "https://www.vibevibe.cn/",
-    "category": "category_1770300581787",
-    "tags": [
-      "AI编程",
-      "学习教程"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=vibevibe.cn"
   },
   {
     "id": 1770301532775,
@@ -1078,6 +1066,18 @@ export const websiteData = [
       "考公"
     ],
     "icon": "/assets/logo.png"
+  },
+  {
+    "id": 1771832132817,
+    "name": "Vibe Vibe",
+    "description": "人人都能学会 AI 编程",
+    "url": "https://www.vibevibe.cn/",
+    "category": "category_1775290655068",
+    "tags": [
+      "AI编程",
+      "学习教程"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=vibevibe.cn"
   },
   {
     "id": 1775290767575,
