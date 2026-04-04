@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/4 16:23:50
+// 网站数据 - 通过管理后台更新于 2026/4/4 16:30:56
 
 // 站点配置
 export const siteConfig = {
@@ -1086,9 +1086,70 @@ export const websiteData = [
     "url": "https://www.shadertoy.com/",
     "category": "category_1775290655068",
     "tags": [
-      "vibecoding"
+      "vibecoding",
+      "灵感网站"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.shadertoy.com"
+  },
+  {
+    "id": 1775291263173,
+    "name": "React Bits",
+    "description": "vibecoding灵感网站",
+    "url": "https://reactbits.dev/",
+    "category": "category_1775290655068",
+    "tags": [
+      "vibecoding",
+      "灵感网站"
+    ],
+    "icon": "/assets/logo.png"
+  },
+  {
+    "id": 1775291326197,
+    "name": "ShaderGPT",
+    "description": "vibecoding灵感网站",
+    "url": "https://shadergpt.14islands.com/",
+    "category": "category_1775290655068",
+    "tags": [
+      "vibecoding",
+      "灵感网站"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=shadergpt.14islands.com"
+  },
+  {
+    "id": 1775291374965,
+    "name": "GLSL Sandbox",
+    "description": "vibecoding灵感网站",
+    "url": "https://glslsandbox.com/e",
+    "category": "category_1775290655068",
+    "tags": [
+      "vibecoding",
+      "灵感网站"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=glslsandbox.com"
+  },
+  {
+    "id": 1775291410963,
+    "name": "OpenProcessing",
+    "description": "vibecoding灵感网站",
+    "url": "https://openprocessing.org/",
+    "category": "category_1775290655068",
+    "tags": [
+      "vibecoding",
+      "灵感网站"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=openprocessing.org"
+  },
+  {
+    "id": 1775291451233,
+    "name": "LYGIA Shader Library",
+    "description": "vibecoding灵感网站",
+    "url": "https://lygia.xyz/",
+    "category": "category_1775290655068",
+    "tags": [
+      "vibecoding",
+      "灵感网站"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=lygia.xyz"
   },
   {
     "id": 1770302354344,
