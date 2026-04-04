@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/4 16:39:14
+// 网站数据 - 通过管理后台更新于 2026/4/4 16:48:23
 
 // 站点配置
 export const siteConfig = {
@@ -193,6 +193,18 @@ export const websiteData = [
       "自动化"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=happycapy.ai"
+  },
+  {
+    "id": 1775292498840,
+    "name": "Google AI Studio",
+    "description": "vibecoding网站",
+    "url": "https://aistudio.google.com/prompts/new_chat",
+    "category": "category_1770300358965",
+    "tags": [
+      "vibecoding",
+      "AI"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=aistudio.google.com"
   },
   {
     "id": 1770984994337,
