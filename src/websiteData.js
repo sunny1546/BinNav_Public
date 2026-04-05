@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/5 00:55:22
+// 网站数据 - 通过管理后台更新于 2026/4/5 14:35:43
 
 // 站点配置
 export const siteConfig = {
@@ -58,8 +58,8 @@ export const websiteData = [
   },
   {
     "id": 1775321660215,
-    "name": "Immersive Writing",
-    "description": "我的vibe coding项目-沉浸式写作，让情绪得到安放",
+    "name": "我的vibe coding",
+    "description": "沉浸式写作，让情绪得到安放",
     "url": "https://www.an46.us.kg/",
     "category": "category_1772934696506",
     "tags": [
@@ -1631,5 +1631,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-04"
+  lastUpdated: "2026-04-05"
 };
