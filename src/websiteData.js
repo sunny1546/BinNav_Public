@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/5 14:35:43
+// 网站数据 - 通过管理后台更新于 2026/4/7 23:03:59
 
 // 站点配置
 export const siteConfig = {
@@ -49,12 +49,12 @@ export const websiteData = [
     "id": 1775214681779,
     "name": "我的图床",
     "description": "个人搭建的自用图床",
-    "url": "https://img46.us.ci/",
+    "url": "https://em46.dpdns.org/",
     "category": "category_1772934696506",
     "tags": [
       "我的图床"
     ],
-    "icon": "https://icon.nbvil.com/favicon?url=img46.us.ci"
+    "icon": "https://icon.nbvil.com/favicon?url=em46.dpdns.org"
   },
   {
     "id": 1775321660215,
@@ -1631,5 +1631,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-05"
+  lastUpdated: "2026-04-07"
 };
