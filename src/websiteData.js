@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/12 05:18:01
+// 网站数据 - 通过管理后台更新于 2026/4/12 05:22:00
 
 // 站点配置
 export const siteConfig = {
@@ -1185,6 +1185,18 @@ export const websiteData = [
       "灵感网站"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=lygia.xyz"
+  },
+  {
+    "id": 1775942515569,
+    "name": "daisyUI",
+    "description": "提供CSS组件库代码，便于vibecoding",
+    "url": "https://daisyui.com/",
+    "category": "category_1775290655068",
+    "tags": [
+      "组件库",
+      "vibecoding"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=daisyui.com"
   },
   {
     "id": 1770302354344,
