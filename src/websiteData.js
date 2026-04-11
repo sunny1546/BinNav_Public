@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/12 05:25:14
+// 网站数据 - 通过管理后台更新于 2026/4/12 05:30:11
 
 // 站点配置
 export const siteConfig = {
@@ -1209,6 +1209,19 @@ export const websiteData = [
       "vibecoding"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=daisyui.com"
+  },
+  {
+    "id": 1775943008053,
+    "name": "UIverse",
+    "description": "最大的开源用户界面库",
+    "url": "https://uiverse.io/",
+    "category": "category_1775290655068",
+    "tags": [
+      "界面库",
+      "组件库",
+      "vibecodibg"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=uiverse.io"
   },
   {
     "id": 1770302354344,
