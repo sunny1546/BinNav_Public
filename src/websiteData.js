@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/12 05:30:11
+// 网站数据 - 通过管理后台更新于 2026/4/12 05:33:17
 
 // 站点配置
 export const siteConfig = {
@@ -1222,6 +1222,18 @@ export const websiteData = [
       "vibecodibg"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=uiverse.io"
+  },
+  {
+    "id": 1775943193347,
+    "name": "React Bits",
+    "description": "动画组件库",
+    "url": "http://reactbits.dev/",
+    "category": "category_1775290655068",
+    "tags": [
+      "组件库",
+      "vibecoding"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770302354344,
