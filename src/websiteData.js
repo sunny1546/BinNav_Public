@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/7 23:03:59
+// 网站数据 - 通过管理后台更新于 2026/4/12 05:18:01
 
 // 站点配置
 export const siteConfig = {
@@ -809,6 +809,17 @@ export const websiteData = [
       "工具"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=flow-space-v1.vercel.app"
+  },
+  {
+    "id": 1775942276878,
+    "name": "TinyWow",
+    "description": "提供PDF、视频、图片及其他在线工具",
+    "url": "https://tinywow.com/",
+    "category": "category_1770300635754",
+    "tags": [
+      "在线工具"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=tinywow.com"
   },
   {
     "id": 1770301932268,
@@ -1631,5 +1642,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-07"
+  lastUpdated: "2026-04-11"
 };
