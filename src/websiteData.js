@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/12 05:22:00
+// 网站数据 - 通过管理后台更新于 2026/4/12 05:25:14
 
 // 站点配置
 export const siteConfig = {
@@ -1090,6 +1090,18 @@ export const websiteData = [
       "vibe coding"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=datawhalechina.github.io"
+  },
+  {
+    "id": 1775942709968,
+    "name": "language Reactor",
+    "description": "在线看剧学英语",
+    "url": "https://www.languagereactor.com/",
+    "category": "category_1770300724503",
+    "tags": [
+      "在线看剧",
+      "学英语"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.languagereactor.com"
   },
   {
     "id": 1770302333125,
