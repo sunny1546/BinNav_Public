@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/12 05:33:17
+// 网站数据 - 通过管理后台更新于 2026/4/13 22:48:26
 
 // 站点配置
 export const siteConfig = {
@@ -820,6 +820,19 @@ export const websiteData = [
       "在线工具"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=tinywow.com"
+  },
+  {
+    "id": 1776091702271,
+    "name": "职业工艺",
+    "description": "在线解析简历，匹配岗位JD",
+    "url": "https://www.careercraft-ai.com/",
+    "category": "category_1770300635754",
+    "tags": [
+      "简历解析",
+      "找工作",
+      "工具"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770301932268,
@@ -1691,5 +1704,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-11"
+  lastUpdated: "2026-04-13"
 };
