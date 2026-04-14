@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/13 22:48:26
+// 网站数据 - 通过管理后台更新于 2026/4/14 18:40:19
 
 // 站点配置
 export const siteConfig = {
@@ -38,12 +38,12 @@ export const websiteData = [
     "id": 1775045050683,
     "name": "我的节点",
     "description": "我的自建机场节点",
-    "url": "https://an46.us.ci/login",
+    "url": "https://sunny46.us.kg/login",
     "category": "category_1772934696506",
     "tags": [
       "我的机场"
     ],
-    "icon": "/assets/logo.png"
+    "icon": "https://icon.nbvil.com/favicon?url=us.kg"
   },
   {
     "id": 1775214681779,
@@ -1704,5 +1704,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-13"
+  lastUpdated: "2026-04-14"
 };
