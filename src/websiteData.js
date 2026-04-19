@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/19 16:22:51
+// 网站数据 - 通过管理后台更新于 2026/4/19 22:17:23
 
 // 站点配置
 export const siteConfig = {
@@ -241,6 +241,19 @@ export const websiteData = [
       "订阅"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=aixor.org"
+  },
+  {
+    "id": 1776608203379,
+    "name": "腾讯云openclaw控制台",
+    "description": "26年8月1日到期",
+    "url": "https://console.cloud.tencent.com/lighthouse/instance/detail?rid=9&id=lhins-ryptoj2b&tab=application",
+    "category": "category_1770607315378",
+    "tags": [
+      "openclaw",
+      "腾讯云",
+      "服务器"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770301027270,
