@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/14 18:44:57
+// 网站数据 - 通过管理后台更新于 2026/4/19 16:22:51
 
 // 站点配置
 export const siteConfig = {
@@ -38,7 +38,7 @@ export const websiteData = [
     "id": 1775045050683,
     "name": "我的节点",
     "description": "我的自建机场节点",
-    "url": "https://sunny46.us.kg/login",
+    "url": "https://sunny46.us.kg/admin",
     "category": "category_1772934696506",
     "tags": [
       "我的机场"
@@ -1704,5 +1704,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-14"
+  lastUpdated: "2026-04-19"
 };
