@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/19 22:19:22
+// 网站数据 - 通过管理后台更新于 2026/4/21 19:37:55
 
 // 站点配置
 export const siteConfig = {
@@ -1141,6 +1141,18 @@ export const websiteData = [
     "icon": "/assets/logo.png"
   },
   {
+    "id": 1776771469095,
+    "name": "海狗远程俱乐部",
+    "description": "找远程工作的网站",
+    "url": "https://haigooremote.com/",
+    "category": "category_1770300734553",
+    "tags": [
+      "找工作",
+      "远程"
+    ],
+    "icon": "/assets/logo.png"
+  },
+  {
     "id": 1771832132817,
     "name": "Vibe Vibe",
     "description": "人人都能学会 AI 编程",
@@ -1717,5 +1729,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-19"
+  lastUpdated: "2026-04-21"
 };
