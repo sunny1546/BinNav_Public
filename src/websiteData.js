@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/21 19:37:55
+// 网站数据 - 通过管理后台更新于 2026/4/29 19:30:33
 
 // 站点配置
 export const siteConfig = {
@@ -1428,6 +1428,17 @@ export const websiteData = [
     "icon": "/assets/logo.png"
   },
   {
+    "id": 1777462228853,
+    "name": "Kitty Network",
+    "description": "24元/年",
+    "url": "https://kitty.sb/#/shop",
+    "category": "category_1770300757443",
+    "tags": [
+      "机场"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=kitty.sb"
+  },
+  {
     "id": 1770302601173,
     "name": "V2RaySE",
     "description": "科学上网工具箱",
@@ -1729,5 +1740,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-21"
+  lastUpdated: "2026-04-29"
 };
