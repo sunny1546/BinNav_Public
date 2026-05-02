@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/4/29 19:30:33
+// 网站数据 - 通过管理后台更新于 2026/5/2 19:57:16
 
 // 站点配置
 export const siteConfig = {
@@ -648,6 +648,18 @@ export const websiteData = [
       "下载"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.ruancang.net"
+  },
+  {
+    "id": 1777723031599,
+    "name": "DdiskGenius",
+    "description": "磁盘管理器，磁盘分区，数据无损",
+    "url": "https://www.diskgenius.cn/",
+    "category": "category_1770300624704",
+    "tags": [
+      "磁盘管理",
+      "磁盘分区"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.diskgenius.cn"
   },
   {
     "id": 1770301674451,
@@ -1740,5 +1752,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-04-29"
+  lastUpdated: "2026-05-02"
 };
