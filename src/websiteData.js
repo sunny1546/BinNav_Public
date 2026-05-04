@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/2 19:57:16
+// 网站数据 - 通过管理后台更新于 2026/5/4 09:34:34
 
 // 站点配置
 export const siteConfig = {
@@ -254,6 +254,18 @@ export const websiteData = [
       "服务器"
     ],
     "icon": "/assets/logo.png"
+  },
+  {
+    "id": 1777858469701,
+    "name": "CoBalt",
+    "description": "音视频下载工具，支持 Bilibili、Instagram、TikTok、Twitter、YouTube 等平台",
+    "url": "https://cobalt.tools/",
+    "category": "category_1770607315378",
+    "tags": [
+      "音视频",
+      "下载"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=cobalt.tools"
   },
   {
     "id": 1770301027270,
@@ -1752,5 +1764,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-05-02"
+  lastUpdated: "2026-05-04"
 };
