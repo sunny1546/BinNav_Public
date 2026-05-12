@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/13 03:43:04
+// 网站数据 - 通过管理后台更新于 2026/5/13 03:47:24
 
 // 站点配置
 export const siteConfig = {
@@ -631,8 +631,11 @@ export const websiteData = [
     "name": "天工AI",
     "description": "AI办公智能体先行者，支持文档处理、数据分析、PPT生成等多种办公场景",
     "url": "https://www.tiangong.cn/",
-    "category": "category_1770300599053",
-    "tags": [],
+    "category": "category_1778615121127",
+    "tags": [
+      "AI",
+      "API接口"
+    ],
     "icon": "https://icon.nbvil.com/favicon?url=www.tiangong.cn"
   },
   {
@@ -1616,6 +1619,12 @@ export const categories = [
         "icon": "/assets/163___.png",
         "special": false,
         "subcategories": []
+      },
+      {
+        "id": "category_1778615121127",
+        "name": "API接口",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   },
