@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/13 03:32:25
+// 网站数据 - 通过管理后台更新于 2026/5/13 03:43:04
 
 // 站点配置
 export const siteConfig = {
@@ -625,15 +625,6 @@ export const websiteData = [
       "官网"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=openclaw.ai"
-  },
-  {
-    "id": 1778101614039,
-    "name": "awesome-design-md",
-    "description": "AI 设计资源合集，收录各网站 DESIGN.md 文件，AI 编程时可精准复刻目标网站风格",
-    "url": "https://github.com/VoltAgent/awesome-design-md",
-    "category": "category_1770300599053",
-    "tags": [],
-    "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
     "id": 1778614334472,
@@ -1314,6 +1305,15 @@ export const websiteData = [
       "vibecoding"
     ],
     "icon": "/assets/logo.png"
+  },
+  {
+    "id": 1778101614039,
+    "name": "awesome-design-md",
+    "description": "AI 设计资源合集，收录各网站 DESIGN.md 文件，AI 编程时可精准复刻目标网站风格",
+    "url": "https://github.com/VoltAgent/awesome-design-md",
+    "category": "category_1778089722554",
+    "tags": [],
+    "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
     "id": 1770302354344,
