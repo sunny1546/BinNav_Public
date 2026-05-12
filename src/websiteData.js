@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/13 03:47:24
+// 网站数据 - 通过管理后台更新于 2026/5/13 03:49:52
 
 // 站点配置
 export const siteConfig = {
@@ -1315,7 +1315,11 @@ export const websiteData = [
     "description": "AI 设计资源合集，收录各网站 DESIGN.md 文件，AI 编程时可精准复刻目标网站风格",
     "url": "https://github.com/VoltAgent/awesome-design-md",
     "category": "category_1778089722554",
-    "tags": [],
+    "tags": [
+      "AI",
+      "UI设计",
+      "灵感网站"
+    ],
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
