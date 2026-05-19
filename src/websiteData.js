@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/15 22:39:49
+// 网站数据 - 通过管理后台更新于 2026/5/19 20:59:44
 
 // 站点配置
 export const siteConfig = {
@@ -79,6 +79,19 @@ export const websiteData = [
       "公众号"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
+  },
+  {
+    "id": 1778855982199,
+    "name": "token代理",
+    "description": "我的token代理推广",
+    "url": "https://shop.xuedingtoken.com/",
+    "category": "category_1772934730594",
+    "tags": [
+      "token",
+      "代理",
+      "分销"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770300855101,
@@ -266,19 +279,6 @@ export const websiteData = [
       "下载"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=cobalt.tools"
-  },
-  {
-    "id": 1778855982199,
-    "name": "token代理",
-    "description": "我的token代理推广",
-    "url": "https://shop.xuedingtoken.com/",
-    "category": "category_1770607315378",
-    "tags": [
-      "token",
-      "代理",
-      "分销"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=xuedingtoken.com"
   },
   {
     "id": 1770301027270,
@@ -1814,5 +1814,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-05-15"
+  lastUpdated: "2026-05-19"
 };
