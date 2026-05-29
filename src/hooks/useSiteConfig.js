@@ -7,10 +7,10 @@ const defaultSiteConfig = {
   siteTitle: 'BinNav - 精选网站导航',
   siteLogo: '/assets/logo.png',
   siteDescription: '发现优质网站，提升工作效率。汇聚设计、开发、工具等各类精选网站资源。',
-  // 备案信息配置
-  icpRecord: '', // ICP备案号，如：京ICP备12345678号
-  publicSecurityRecord: '', // 公安备案号，如：京公网安备11010802012345号
-  publicSecurityRecordUrl: '' // 公安备案链接
+  customIconUrl: '',
+  icpRecord: '',
+  publicSecurityRecord: '',
+  publicSecurityRecordUrl: ''
 }
 
 // 从localStorage加载保存的配置

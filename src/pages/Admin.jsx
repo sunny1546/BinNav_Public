@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Lock, Image, Github } from 'lucide-react'
 import { useAdminConfig } from '../hooks/useAdminConfig'
 import { useSiteConfig, updateSiteConfig } from '../hooks/useSiteConfig'
+import { generateConfigFile } from '../utils/configGenerator'
 
 import MessageBar from '../components/admin/MessageBar'
 import UserHeader from '../components/admin/UserHeader'
@@ -11,6 +12,7 @@ import CategoryManager from '../components/admin/CategoryManager'
 import LogoUploader from '../components/admin/LogoUploader'
 import PendingWebsiteManager from '../components/admin/PendingWebsiteManager.jsx'
 import VersionManager from '../components/admin/VersionManager'
+import BackupManager from '../components/admin/BackupManager'
 
 
 function Admin() {
@@ -122,12 +124,12 @@ function Admin() {
     }
   }
 
-  // 本地密码验证备用方案
+  // 本地密码验证备用方案（仅当环境变量配置了密码时生效）
   const tryLocalPasswordVerification = (inputPassword) => {
-    // 这里可以设置本地备用密码，建议使用环境变量
-    const localPassword = import.meta.env.ADMIN_PASSWORD || 'admin'
-
-    // 简单的密码验证
+    const localPassword = import.meta.env.VITE_ADMIN_PASSWORD
+    if (!localPassword) {
+      return false
+    }
     return inputPassword === localPassword
   }
 
@@ -175,6 +177,31 @@ function Admin() {
 
     // 保存所有配置到GitHub
     await saveConfig()
+
+    // 如果开启了WebDAV自动备份，执行备份
+    try {
+      const webdavConfigStr = localStorage.getItem('webdav_config')
+      if (webdavConfigStr) {
+        const webdavCfg = JSON.parse(webdavConfigStr)
+        if (webdavCfg.autoBackup && webdavCfg.url && webdavCfg.username && webdavCfg.password) {
+          const currentSiteConfig = JSON.parse(localStorage.getItem('siteConfig') || '{}')
+          const configContent = generateConfigFile(config.websiteData, config.categories, currentSiteConfig)
+          const filename = `binnav-auto-${new Date().toISOString().replace(/[:.]/g, '-')}.js`
+          const uploadUrl = webdavCfg.url.replace(/\/$/, '') + '/' + filename
+          await fetch(uploadUrl, {
+            method: 'PUT',
+            headers: {
+              'Authorization': 'Basic ' + btoa(`${webdavCfg.username}:${webdavCfg.password}`),
+              'Content-Type': 'text/javascript; charset=utf-8'
+            },
+            body: configContent
+          })
+          localStorage.setItem('last_backup_time', new Date().toLocaleString('zh-CN'))
+        }
+      }
+    } catch (e) {
+      console.warn('自动备份失败:', e)
+    }
   }
 
   // 登录页面UI
@@ -301,6 +328,13 @@ function Admin() {
               />
         )}
 
+        {activeTab === 'backup' && (
+              <BackupManager
+                config={config}
+                showMessage={showMessage}
+              />
+        )}
+
 
 
         {activeTab === 'settings' && (
@@ -370,6 +404,18 @@ function Admin() {
                         placeholder="发现优质网站，提升工作效率。汇聚设计、开发、工具等各类精选网站资源。"
                       />
                       <p className="text-xs text-gray-500 mt-1">网站的简介描述，用于SEO和页面介绍，建议控制在100字以内</p>
+                    </div>
+
+                    <div className="md:col-span-2">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">自定义图标链接</label>
+                      <input
+                        type="url"
+                        value={siteSettings.customIconUrl || ''}
+                        onChange={(e) => setSiteSettings({...siteSettings, customIconUrl: e.target.value})}
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="https://example.com/fallback-icon.png"
+                      />
+                      <p className="text-xs text-gray-500 mt-1">网站卡片图标加载失败时的回退图标地址，留空则使用站点Logo</p>
                     </div>
               </div>
 

@@ -6,6 +6,7 @@ import path from 'path'
 export default defineConfig({
   base: '/',
   plugins: [react()],
+  envPrefix: 'VITE_',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

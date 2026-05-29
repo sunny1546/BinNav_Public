@@ -162,8 +162,21 @@ function HomePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col lg:flex-row gap-6">
           {/* 侧边栏 */}
-          <aside className={`lg:w-64 ${isSidebarOpen ? 'block' : 'hidden'} lg:block`}>
+          <aside className={`lg:w-64 ${isSidebarOpen ? 'fixed inset-0 top-16 z-40 bg-white/95 backdrop-blur-md overflow-y-auto p-4 lg:p-0 lg:relative lg:inset-auto lg:bg-transparent lg:backdrop-blur-none' : 'hidden'} lg:block`}>
             <div className="lg:sticky lg:top-24 space-y-6">
+              {/* 移动端搜索框 */}
+              <div className="lg:hidden">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                  <Input
+                    type="text"
+                    placeholder="站内搜索..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10 h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500 w-full"
+                  />
+                </div>
+              </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 p-6">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
                   网站分类

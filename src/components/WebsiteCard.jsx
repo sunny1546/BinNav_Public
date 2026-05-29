@@ -1,61 +1,27 @@
 import React from 'react'
 import { Card, CardContent } from './ui/card'
+import { useSiteConfig } from '../hooks/useSiteConfig'
 
 const WebsiteCard = ({ website }) => {
-  // 优先使用网站数据中的图标，fallback到自建API
+  const { siteConfig } = useSiteConfig()
+  const fallbackIcon = siteConfig.customIconUrl || siteConfig.siteLogo || '/assets/logo.png'
+
   const getIconUrl = () => {
-    // 1. 优先使用网站数据中的图标（静态文件路径或外网URL）
     if (website.icon) {
       return website.icon
     }
 
-    // 2. 如果没有图标，使用自建图标API作为fallback
     try {
       const hostname = new URL(website.url).hostname
-      const getMainDomain = (hostname) => {
-        const parts = hostname.split('.')
-        if (parts.length > 2) {
-          return parts.slice(-2).join('.')
-        }
-        return hostname
-      }
-      const mainDomain = getMainDomain(hostname)
-
-      // 使用自建图标API
       return `https://icon.nbvil.com/favicon?url=${hostname}`
     } catch (error) {
-      return '/assets/logo.png'
+      return fallbackIcon
     }
   }
 
   const handleIconError = (e) => {
-    console.log('🚫 图标加载失败:', {
-      websiteName: website.name,
-      failedUrl: e.target.src,
-      websiteUrl: website.url
-    })
-
-    try {
-      const hostname = new URL(website.url).hostname
-      const getMainDomain = (hostname) => {
-        const parts = hostname.split('.')
-        if (parts.length > 2) {
-          return parts.slice(-2).join('.')
-        }
-        return hostname
-      }
-      const mainDomain = getMainDomain(hostname)
-
-      // 简化fallback策略 - 自建API失败直接使用默认图标
-      e.target.src = '/assets/logo.png'
-      e.target.onerror = null // 防止无限循环
-      console.log('🔄 自建API失败，使用默认图标')
-    } catch (error) {
-      // 如果URL解析失败，直接使用默认图标
-      e.target.src = '/assets/logo.png'
-      e.target.onerror = null
-      console.log('🔄 URL解析失败，使用默认图标')
-    }
+    e.target.src = fallbackIcon
+    e.target.onerror = null
   }
 
   return (
