@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/29 22:37:54
+// 网站数据 - 通过管理后台更新于 2026/5/29 22:48:22
 
 // 站点配置
 export const siteConfig = {
@@ -291,6 +291,15 @@ export const websiteData = [
       "GitHub"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
+  },
+  {
+    "id": 1780066094760,
+    "name": "百度",
+    "description": "",
+    "url": "https://baidu.com",
+    "category": "category_1770607315378",
+    "tags": [],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770301027270,
