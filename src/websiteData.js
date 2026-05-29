@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/19 20:59:44
+// 网站数据 - 通过管理后台更新于 2026/5/29 21:39:58
 
 // 站点配置
 export const siteConfig = {
@@ -6,6 +6,7 @@ export const siteConfig = {
   "siteTitle": "问安-分享",
   "siteLogo": "/assets/logo.png",
   "siteDescription": "个人使用分享站",
+  "customIconUrl": "",
   "icpRecord": "黔ICP备2026000366号-1",
   "publicSecurityRecord": "",
   "publicSecurityRecordUrl": ""
@@ -279,6 +280,17 @@ export const websiteData = [
       "下载"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=cobalt.tools"
+  },
+  {
+    "id": 1780061993700,
+    "name": "GitHub",
+    "description": "托管代码网站",
+    "url": "https://github.com",
+    "category": "category_1770607315378",
+    "tags": [
+      "GitHub"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
     "id": 1770301027270,
@@ -1814,5 +1826,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-05-19"
+  lastUpdated: "2026-05-29"
 };
