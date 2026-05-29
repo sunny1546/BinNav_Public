@@ -1,17 +1,5 @@
 [
   {
-    "id": "1780072955470",
-    "name": "测试网站",
-    "url": "https://test.com",
-    "description": "测试描述",
-    "category": "工具",
-    "tags": "测试,工具",
-    "contactEmail": "test@test.com",
-    "submitterName": "小梦",
-    "status": "pending",
-    "submittedAt": "2026-05-29T16:42:35.470Z"
-  },
-  {
     "id": "1780073064430",
     "name": "一面千识",
     "url": "https://talent.meetchances.com/jobs",
