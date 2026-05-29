@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/29 22:51:08
+// 网站数据 - 通过管理后台更新于 2026/5/30 01:31:05
 
 // 站点配置
 export const siteConfig = {
@@ -1542,6 +1542,19 @@ export const websiteData = [
       "接码"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=tiger-sms.com"
+  },
+  {
+    "id": 1780075865835,
+    "name": "一面千识",
+    "description": "AI驱动的智能求职平台，提供个性化岗位推荐和简历优化服务",
+    "url": "https://talent.meetchances.com/jobs",
+    "category": "工具",
+    "tags": [
+      "求职",
+      "招聘",
+      "AI"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=talent.meetchances.com"
   }
 ];
 
