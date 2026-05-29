@@ -91,21 +91,25 @@ const BackupManager = ({ config, showMessage }) => {
     }
 
     try {
-      const response = await fetch(webdavConfig.url, {
-        method: 'PROPFIND',
-        headers: {
-          'Authorization': 'Basic ' + btoa(`${webdavConfig.username}:${webdavConfig.password}`),
-          'Depth': '0'
-        }
+      const response = await fetch('/api/webdav-proxy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'test',
+          url: webdavConfig.url,
+          username: webdavConfig.username,
+          password: webdavConfig.password
+        })
       })
 
-      if (response.ok || response.status === 207) {
+      const result = await response.json()
+      if (result.success) {
         showMessage('success', 'WebDAV连接测试成功')
       } else {
-        showMessage('error', `连接失败: HTTP ${response.status}`)
+        showMessage('error', result.message || '连接失败')
       }
     } catch (error) {
-      showMessage('error', `连接失败: ${error.message}。提示：浏览器可能存在跨域限制，实际备份建议通过服务端中转。`)
+      showMessage('error', `连接测试失败: ${error.message}`)
     }
   }
 
@@ -121,24 +125,28 @@ const BackupManager = ({ config, showMessage }) => {
       const configContent = generateConfigFile(config.websiteData, config.categories, currentSiteConfig)
 
       const filename = `binnav-backup-${new Date().toISOString().replace(/[:.]/g, '-')}.js`
-      const uploadUrl = webdavConfig.url.replace(/\/$/, '') + '/' + filename
 
-      const response = await fetch(uploadUrl, {
-        method: 'PUT',
-        headers: {
-          'Authorization': 'Basic ' + btoa(`${webdavConfig.username}:${webdavConfig.password}`),
-          'Content-Type': 'text/javascript; charset=utf-8'
-        },
-        body: configContent
+      const response = await fetch('/api/webdav-proxy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'upload',
+          url: webdavConfig.url,
+          username: webdavConfig.username,
+          password: webdavConfig.password,
+          content: configContent,
+          filename
+        })
       })
 
-      if (response.ok || response.status === 201 || response.status === 204) {
+      const result = await response.json()
+      if (result.success) {
         const now = new Date().toLocaleString('zh-CN')
         setLastBackupTime(now)
         localStorage.setItem('last_backup_time', now)
         showMessage('success', `备份成功: ${filename}`)
       } else {
-        throw new Error(`HTTP ${response.status}`)
+        throw new Error(result.message || '上传失败')
       }
     } catch (error) {
       showMessage('error', `备份失败: ${error.message}`)

@@ -187,14 +187,17 @@ function Admin() {
           const currentSiteConfig = JSON.parse(localStorage.getItem('siteConfig') || '{}')
           const configContent = generateConfigFile(config.websiteData, config.categories, currentSiteConfig)
           const filename = `binnav-auto-${new Date().toISOString().replace(/[:.]/g, '-')}.js`
-          const uploadUrl = webdavCfg.url.replace(/\/$/, '') + '/' + filename
-          await fetch(uploadUrl, {
-            method: 'PUT',
-            headers: {
-              'Authorization': 'Basic ' + btoa(`${webdavCfg.username}:${webdavCfg.password}`),
-              'Content-Type': 'text/javascript; charset=utf-8'
-            },
-            body: configContent
+          await fetch('/api/webdav-proxy', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'upload',
+              url: webdavCfg.url,
+              username: webdavCfg.username,
+              password: webdavCfg.password,
+              content: configContent,
+              filename
+            })
           })
           localStorage.setItem('last_backup_time', new Date().toLocaleString('zh-CN'))
         }

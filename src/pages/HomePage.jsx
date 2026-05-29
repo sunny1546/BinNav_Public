@@ -173,6 +173,11 @@ function HomePage() {
                     placeholder="站内搜索..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && searchTerm.trim()) {
+                        setIsSidebarOpen(false)
+                      }
+                    }}
                     className="pl-10 h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500 w-full"
                   />
                 </div>
