@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/30 02:38:55
+// 网站数据 - 通过管理后台更新于 2026/5/30 02:40:25
 
 // 站点配置
 export const siteConfig = {
@@ -1488,6 +1488,19 @@ export const websiteData = [
       "接码"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=tiger-sms.com"
+  },
+  {
+    "id": 1780080025761,
+    "name": "盐选",
+    "description": "盐选内容订阅平台，提供付费会员专属优质内容资源",
+    "url": "https://www.yanxuan.org/",
+    "category": "category_1780080025761",
+    "tags": [
+      "会员",
+      "付费内容",
+      "订阅"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.yanxuan.org"
   }
 ];
 
@@ -1737,6 +1750,20 @@ export const categories = [
         "icon": "/assets/163___.png",
         "special": false,
         "subcategories": []
+      }
+    ]
+  },
+  {
+    "id": "category_ai_1780080025761",
+    "name": "AI新增",
+    "icon": "/assets/____.png",
+    "special": false,
+    "subcategories": [
+      {
+        "id": "category_1780080025761",
+        "name": "内容订阅",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   }
