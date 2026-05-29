@@ -410,19 +410,26 @@ const BackupManager = ({ config, showMessage }) => {
       {/* 第一步确认弹窗：选择备份文件 */}
       {showRestoreConfirm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl">
-            <h4 className="text-lg font-semibold text-gray-900 mb-3">从云端恢复数据</h4>
-            <p className="text-sm text-gray-600 mb-4">请选择要恢复的备份文件：</p>
+          <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 shadow-xl">
+            <h4 className="text-lg font-semibold text-gray-900 mb-2">从云端恢复数据</h4>
+            <p className="text-sm text-gray-600 mb-4">
+              云端共找到 <span className="font-medium text-blue-600">{cloudBackupFiles.length}</span> 个备份文件，请选择要恢复的版本：
+            </p>
 
             <select
               value={selectedBackupFile}
               onChange={(e) => setSelectedBackupFile(e.target.value)}
-              className="w-full p-2.5 border border-gray-300 rounded-lg mb-4 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              size={Math.min(cloudBackupFiles.length, 8)}
+              className="w-full p-2.5 border border-gray-300 rounded-lg mb-4 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono"
             >
               {cloudBackupFiles.map((file) => (
                 <option key={file} value={file}>{file}</option>
               ))}
             </select>
+
+            <p className="text-xs text-gray-500 mb-4">
+              文件按时间倒序排列，最新备份在最上方
+            </p>
 
             <div className="flex justify-end space-x-3">
               <button

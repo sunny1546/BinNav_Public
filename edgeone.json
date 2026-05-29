@@ -30,17 +30,37 @@
     "RESEND_DOMAIN": {
       "description": "Resend发送域名（仅域名部分，不包含@符号）",
       "required": false
+    },
+    "OPENCLAW_KEY": {
+      "description": "API Key，允许外部Agent通过 X-API-Key 头免密调用接口",
+      "required": false
     }
   },
   "functions": {
     "directory": "functions",
     "runtime": "nodejs18.x"
   },
+  "routes": [
+    {
+      "source": "/api/(.*)",
+      "function": "api/$1"
+    }
+  ],
   "redirects": [
     {
       "source": "/admin",
       "destination": "/admin",
       "statusCode": 200
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ],
   "headers": [

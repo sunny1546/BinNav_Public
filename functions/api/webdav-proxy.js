@@ -119,29 +119,14 @@ export async function onRequestPost({ request, env }) {
 
       const xml = await resp.text()
       const files = []
-      const hrefRegex = /<d:href>([^<]+)<\/d:href>/gi
-      const altHrefRegex = /<D:href>([^<]+)<\/D:href>/gi
-      const nsHrefRegex = /<[^>]*href[^>]*>([^<]+)<\/[^>]*href>/gi
+      const hrefPattern = /<[^>]*href[^>]*>([^<]+)<\/[^>]*href[^>]*>/gi
 
       let match
-      while ((match = hrefRegex.exec(xml)) !== null) {
+      while ((match = hrefPattern.exec(xml)) !== null) {
         const href = decodeURIComponent(match[1])
-        if (href.endsWith('.js') && href.includes('binnav-backup')) {
-          files.push(href.split('/').pop())
-        }
-      }
-      while ((match = altHrefRegex.exec(xml)) !== null) {
-        const href = decodeURIComponent(match[1])
-        if (href.endsWith('.js') && href.includes('binnav-backup') && !files.includes(href.split('/').pop())) {
-          files.push(href.split('/').pop())
-        }
-      }
-      if (files.length === 0) {
-        while ((match = nsHrefRegex.exec(xml)) !== null) {
-          const href = decodeURIComponent(match[1])
-          if (href.endsWith('.js') && href.includes('binnav-backup') && !files.includes(href.split('/').pop())) {
-            files.push(href.split('/').pop())
-          }
+        const fileName = href.split('/').filter(Boolean).pop()
+        if (fileName && fileName.endsWith('.js') && !files.includes(fileName)) {
+          files.push(fileName)
         }
       }
 
