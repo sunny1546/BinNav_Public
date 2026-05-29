@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Download, Upload, Cloud, CloudOff, RefreshCw, CheckCircle, AlertCircle } from 'lucide-react'
+import { Download, Upload, Cloud, CloudOff, RefreshCw, CheckCircle, AlertCircle, DownloadCloud } from 'lucide-react'
 import { generateConfigFile } from '../../utils/configGenerator.js'
 
 const BackupManager = ({ config, showMessage }) => {
@@ -13,6 +13,11 @@ const BackupManager = ({ config, showMessage }) => {
   })
   const [isBackingUp, setIsBackingUp] = useState(false)
   const [isRestoring, setIsRestoring] = useState(false)
+  const [isCloudRestoring, setIsCloudRestoring] = useState(false)
+  const [showRestoreConfirm, setShowRestoreConfirm] = useState(false)
+  const [showRestoreFinalConfirm, setShowRestoreFinalConfirm] = useState(false)
+  const [cloudBackupFiles, setCloudBackupFiles] = useState([])
+  const [selectedBackupFile, setSelectedBackupFile] = useState('')
   const [lastBackupTime, setLastBackupTime] = useState(() => localStorage.getItem('last_backup_time') || '')
   const fileInputRef = useRef(null)
 
@@ -155,6 +160,104 @@ const BackupManager = ({ config, showMessage }) => {
     }
   }
 
+  const handleCloudRestoreClick = async () => {
+    if (!webdavConfig.url || !webdavConfig.username || !webdavConfig.password) {
+      showMessage('error', '请先配置WebDAV信息')
+      return
+    }
+
+    try {
+      const response = await fetch('/api/webdav-proxy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'list',
+          url: webdavConfig.url,
+          username: webdavConfig.username,
+          password: webdavConfig.password
+        })
+      })
+
+      const result = await response.json()
+      if (result.success && result.files.length > 0) {
+        setCloudBackupFiles(result.files)
+        setSelectedBackupFile(result.files[0])
+        setShowRestoreConfirm(true)
+      } else if (result.success && result.files.length === 0) {
+        showMessage('error', '云端没有找到备份文件')
+      } else {
+        showMessage('error', result.message || '获取备份列表失败')
+      }
+    } catch (error) {
+      showMessage('error', `获取备份列表失败: ${error.message}`)
+    }
+  }
+
+  const handleRestoreFirstConfirm = () => {
+    setShowRestoreConfirm(false)
+    setShowRestoreFinalConfirm(true)
+  }
+
+  const handleRestoreCancel = () => {
+    setShowRestoreConfirm(false)
+    setShowRestoreFinalConfirm(false)
+    setSelectedBackupFile('')
+    setCloudBackupFiles([])
+  }
+
+  const handleCloudRestore = async () => {
+    setShowRestoreFinalConfirm(false)
+    setIsCloudRestoring(true)
+
+    try {
+      const response = await fetch('/api/webdav-proxy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'download',
+          url: webdavConfig.url,
+          username: webdavConfig.username,
+          password: webdavConfig.password,
+          filename: selectedBackupFile
+        })
+      })
+
+      const result = await response.json()
+      if (!result.success) {
+        throw new Error(result.message || '下载失败')
+      }
+
+      const text = result.content
+
+      const siteConfigMatch = text.match(/export const siteConfig\s*=\s*({[\s\S]*?});/)
+      const websiteDataMatch = text.match(/export const websiteData\s*=\s*(\[[\s\S]*?\]);/)
+      const categoriesMatch = text.match(/export const categories\s*=\s*(\[[\s\S]*?\]);/)
+
+      if (!websiteDataMatch || !categoriesMatch) {
+        throw new Error('备份文件格式不正确，无法解析数据')
+      }
+
+      const websiteData = JSON.parse(websiteDataMatch[1])
+      const categories = JSON.parse(categoriesMatch[1])
+
+      if (siteConfigMatch) {
+        const siteConfig = JSON.parse(siteConfigMatch[1])
+        localStorage.setItem('siteConfig', JSON.stringify(siteConfig))
+      }
+
+      localStorage.setItem('imported_websiteData', JSON.stringify(websiteData))
+      localStorage.setItem('imported_categories', JSON.stringify(categories))
+
+      showMessage('success', `云端恢复成功（${selectedBackupFile}）！请点击右上角"保存设置"将数据同步到远程仓库，然后刷新页面。`)
+    } catch (error) {
+      showMessage('error', `云端恢复失败: ${error.message}`)
+    } finally {
+      setIsCloudRestoring(false)
+      setSelectedBackupFile('')
+      setCloudBackupFiles([])
+    }
+  }
+
   return (
     <div className="space-y-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-6">数据备份</h3>
@@ -278,6 +381,14 @@ const BackupManager = ({ config, showMessage }) => {
             <Cloud size={14} />
             <span>{isBackingUp ? '备份中...' : '立即备份到云端'}</span>
           </button>
+          <button
+            onClick={handleCloudRestoreClick}
+            disabled={isCloudRestoring}
+            className="flex items-center space-x-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors text-sm disabled:opacity-50"
+          >
+            <DownloadCloud size={14} />
+            <span>{isCloudRestoring ? '恢复中...' : '从云端恢复'}</span>
+          </button>
         </div>
 
         <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
@@ -295,6 +406,77 @@ const BackupManager = ({ config, showMessage }) => {
           </div>
         </div>
       </div>
+
+      {/* 第一步确认弹窗：选择备份文件 */}
+      {showRestoreConfirm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl">
+            <h4 className="text-lg font-semibold text-gray-900 mb-3">从云端恢复数据</h4>
+            <p className="text-sm text-gray-600 mb-4">请选择要恢复的备份文件：</p>
+
+            <select
+              value={selectedBackupFile}
+              onChange={(e) => setSelectedBackupFile(e.target.value)}
+              className="w-full p-2.5 border border-gray-300 rounded-lg mb-4 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              {cloudBackupFiles.map((file) => (
+                <option key={file} value={file}>{file}</option>
+              ))}
+            </select>
+
+            <div className="flex justify-end space-x-3">
+              <button
+                onClick={handleRestoreCancel}
+                className="px-4 py-2 text-sm text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                取消
+              </button>
+              <button
+                onClick={handleRestoreFirstConfirm}
+                className="px-4 py-2 text-sm text-white bg-orange-600 rounded-lg hover:bg-orange-700 transition-colors"
+              >
+                下一步
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 第二步确认弹窗：二次确认 */}
+      {showRestoreFinalConfirm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 shadow-xl">
+            <div className="flex items-center space-x-2 mb-3">
+              <AlertCircle size={20} className="text-red-600" />
+              <h4 className="text-lg font-semibold text-red-600">危险操作确认</h4>
+            </div>
+            <p className="text-sm text-gray-700 mb-2">
+              您即将从云端恢复备份文件：
+            </p>
+            <p className="text-sm font-mono bg-gray-100 p-2 rounded mb-3 break-all">
+              {selectedBackupFile}
+            </p>
+            <p className="text-sm text-red-600 font-medium mb-4">
+              此操作将覆盖当前所有站点数据，且不可撤销！请确认您已了解风险。
+            </p>
+
+            <div className="flex justify-end space-x-3">
+              <button
+                onClick={handleRestoreCancel}
+                className="px-4 py-2 text-sm text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                取消
+              </button>
+              <button
+                onClick={handleCloudRestore}
+                className="px-4 py-2 text-sm text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors"
+              >
+                确认恢复
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

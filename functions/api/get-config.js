@@ -2,7 +2,10 @@
  * EdgeOne Functions - 获取配置文件
  * 路由: /api/get-config
  * 用途: 获取当前websiteData.js文件内容，用于管理后台编辑
+ * 鉴权: 支持 X-API-Key 头部认证（匹配 OPENCLAW_KEY 环境变量）
  */
+
+import { verifyApiKey } from './_auth.js'
 
 // 简化的Base64解码函数
 function base64Decode(str) {
@@ -68,6 +71,20 @@ export async function onRequest(context) {
         'Access-Control-Allow-Origin': '*'
       }
     });
+  }
+
+  // API Key 鉴权：若请求头包含 X-API-Key，则必须匹配
+  const apiKeyHeader = request.headers.get('X-API-Key') || request.headers.get('x-api-key')
+  if (apiKeyHeader) {
+    if (!verifyApiKey(request, env)) {
+      return new Response(JSON.stringify({ success: false, message: 'API Key 无效' }), {
+        status: 401,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
+    }
   }
 
   // 获取环境变量

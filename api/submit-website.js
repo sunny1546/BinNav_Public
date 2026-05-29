@@ -2,7 +2,10 @@
  * Vercel API Route - 提交网站
  * 路由: /api/submit-website
  * 用途: 用户提交新网站到待审核列表
+ * 鉴权: 支持 X-API-Key 头部认证（匹配 OPENCLAW_KEY 环境变量），持有有效 Key 可直接写入
  */
+
+import { verifyApiKey } from './_auth.js'
 
 export const config = {
   runtime: 'edge',
@@ -12,17 +15,29 @@ export default async function handler(request, response) {
   // 处理CORS
   response.setHeader('Access-Control-Allow-Origin', '*');
   response.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  
+  response.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-API-Key');
+
   if (request.method === 'OPTIONS') {
     return response.status(200).end();
   }
-  
+
   if (request.method !== 'POST') {
     return response.status(405).json({
       success: false,
       message: '只支持POST请求'
     });
+  }
+
+  // API Key 鉴权：若请求头包含 X-API-Key，则必须匹配
+  const apiKeyHeader = request.headers['x-api-key'];
+  if (apiKeyHeader) {
+    const openclawKey = process.env.OPENCLAW_KEY;
+    if (!openclawKey || apiKeyHeader !== openclawKey) {
+      return response.status(401).json({
+        success: false,
+        message: 'API Key 无效'
+      });
+    }
   }
 
   try {

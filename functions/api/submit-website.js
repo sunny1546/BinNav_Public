@@ -2,7 +2,10 @@
  * EdgeOne Functions - 站点提交
  * 路由: /api/submit-website
  * 用途: 接收用户提交的站点，保存到待审核列表并发送邮件通知
+ * 鉴权: 支持 X-API-Key 头部认证（匹配 OPENCLAW_KEY 环境变量），持有有效 Key 可直接写入
  */
+
+import { verifyApiKey } from './_auth.js'
 
 // 处理OPTIONS请求（CORS预检）
 export async function onRequestOptions({ request }) {
@@ -11,7 +14,7 @@ export async function onRequestOptions({ request }) {
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Headers': 'Content-Type, X-API-Key',
       'Access-Control-Max-Age': '86400'
     }
   });
@@ -23,6 +26,20 @@ export async function onRequestPost({ request, env }) {
   const RESEND_API_KEY = env.RESEND_API_KEY;
   const ADMIN_EMAIL = env.ADMIN_EMAIL;
   const RESEND_DOMAIN = env.RESEND_DOMAIN;
+
+  // API Key 鉴权：若请求头包含 X-API-Key，则必须匹配
+  const apiKeyHeader = request.headers.get('X-API-Key') || request.headers.get('x-api-key')
+  if (apiKeyHeader) {
+    if (!verifyApiKey(request, env)) {
+      return new Response(JSON.stringify({ success: false, message: 'API Key 无效' }), {
+        status: 401,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
+    }
+  }
 
   // 检查GitHub配置
   if (!GITHUB_TOKEN) {

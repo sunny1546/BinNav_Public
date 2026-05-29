@@ -2,7 +2,10 @@
  * EdgeOne Functions - 处理站点审核
  * 路由: /api/process-website-submission
  * 用途: 管理员审核站点提交（通过或拒绝），并发送邮件通知提交者
+ * 鉴权: 支持 X-API-Key 头部认证（匹配 OPENCLAW_KEY 环境变量）
  */
+
+import { verifyApiKey } from './_auth.js'
 
 // 处理OPTIONS请求（CORS预检）
 export async function onRequestOptions({ request }) {
@@ -11,7 +14,7 @@ export async function onRequestOptions({ request }) {
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Headers': 'Content-Type, X-API-Key',
       'Access-Control-Max-Age': '86400'
     }
   });
@@ -20,6 +23,20 @@ export async function onRequestOptions({ request }) {
 // 处理POST请求
 export async function onRequestPost({ request, env }) {
   const { RESEND_API_KEY, RESEND_DOMAIN } = env;
+
+  // API Key 鉴权：若请求头包含 X-API-Key，则必须匹配
+  const apiKeyHeader = request.headers.get('X-API-Key') || request.headers.get('x-api-key')
+  if (apiKeyHeader) {
+    if (!verifyApiKey(request, env)) {
+      return new Response(JSON.stringify({ success: false, message: 'API Key 无效' }), {
+        status: 401,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
+    }
+  }
 
   try {
     // 解析请求数据

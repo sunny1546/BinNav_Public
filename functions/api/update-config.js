@@ -2,7 +2,10 @@
  * EdgeOne Functions - 更新配置文件
  * 路由: /api/update-config
  * 用途: 更新websiteData.js文件内容，触发EdgeOne Pages重新部署
+ * 鉴权: 支持 X-API-Key 头部认证（匹配 OPENCLAW_KEY 环境变量）
  */
+
+import { verifyApiKey } from './_auth.js'
 
 // Base64 编码函数（纯JavaScript实现，兼容所有环境）
 function base64Encode(str) {
@@ -60,7 +63,7 @@ export async function onRequestOptions({ request }) {
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-API-Key',
       'Access-Control-Max-Age': '86400'
     }
   });
@@ -69,6 +72,20 @@ export async function onRequestOptions({ request }) {
 // 处理POST请求
 export async function onRequestPost({ request, env }) {
   const { GITHUB_TOKEN, GITHUB_REPO } = env;
+
+  // API Key 鉴权：若请求头包含 X-API-Key，则必须匹配
+  const apiKeyHeader = request.headers.get('X-API-Key') || request.headers.get('x-api-key')
+  if (apiKeyHeader) {
+    if (!verifyApiKey(request, env)) {
+      return new Response(JSON.stringify({ success: false, message: 'API Key 无效' }), {
+        status: 401,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
+    }
+  }
   
   if (!GITHUB_TOKEN) {
     return new Response(JSON.stringify({
