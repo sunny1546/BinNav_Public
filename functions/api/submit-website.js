@@ -139,21 +139,72 @@ export async function onRequestPost({ request, env }) {
       const categoriesArr = JSON.parse(categoriesMatch[1]);
       const siteConfigObj = siteConfigMatch ? JSON.parse(siteConfigMatch[1]) : {};
 
-      // 3. 构建新网站条目（格式与管理员手动添加完全一致）
+      // 3. 解析分类，支持动态创建
+      let resolvedCategory = (category || '').trim();
+
+      if (resolvedCategory) {
+        // 在所有子分类中查找是否已存在该分类名称
+        let foundCategoryId = null;
+        for (const cat of categoriesArr) {
+          if (cat.subcategories) {
+            const existing = cat.subcategories.find(sub => sub.name === resolvedCategory || sub.id === resolvedCategory);
+            if (existing) {
+              foundCategoryId = existing.id;
+              break;
+            }
+          }
+          if (cat.name === resolvedCategory || cat.id === resolvedCategory) {
+            foundCategoryId = cat.id;
+            break;
+          }
+        }
+
+        if (foundCategoryId) {
+          resolvedCategory = foundCategoryId;
+        } else {
+          // 分类不存在，自动创建到"AI新增"父分类下
+          let aiParent = categoriesArr.find(cat => cat.name === 'AI新增');
+          if (!aiParent) {
+            aiParent = {
+              id: `category_ai_${Date.now()}`,
+              name: 'AI新增',
+              icon: '/assets/____.png',
+              special: false,
+              subcategories: []
+            };
+            categoriesArr.push(aiParent);
+          }
+          if (!aiParent.subcategories) {
+            aiParent.subcategories = [];
+          }
+          const newSubCategory = {
+            id: `category_${Date.now()}`,
+            name: resolvedCategory,
+            icon: '/assets/163___.png',
+            special: false
+          };
+          aiParent.subcategories.push(newSubCategory);
+          resolvedCategory = newSubCategory.id;
+        }
+      } else {
+        resolvedCategory = categoriesArr[0]?.id || 'tools';
+      }
+
+      // 4. 构建新网站条目（格式与管理员手动添加完全一致）
       const newWebsite = {
         id: Date.now(),
         name: name.trim(),
         description: (description || '').trim(),
         url: processedUrl,
-        category: (category || categoriesArr[0]?.id || 'tools').trim(),
+        category: resolvedCategory,
         tags: Array.isArray(tags) ? tags : (tags ? tags.split(',').map(t => t.trim()).filter(Boolean) : []),
         icon: icon || `https://icon.nbvil.com/favicon?url=${new URL(processedUrl).hostname}`
       };
 
-      // 4. 追加到数组
+      // 5. 追加到数组
       websiteDataArr.push(newWebsite);
 
-      // 5. 重新生成配置文件（与 configGenerator.js 逻辑一致）
+      // 6. 重新生成配置文件（与 configGenerator.js 逻辑一致）
       const timestamp = new Date().toLocaleString('zh-CN');
       const newFileContent = `// 网站数据 - 通过管理后台更新于 ${timestamp}
 
@@ -208,7 +259,7 @@ export const siteStats = {
 };
 `;
 
-      // 6. 提交到 GitHub
+      // 7. 提交到 GitHub
       const encodedContent = btoa(unescape(encodeURIComponent(newFileContent)));
 
       const commitResponse = await fetch(

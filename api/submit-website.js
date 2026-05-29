@@ -142,13 +142,61 @@ export default async function handler(request) {
       const categoriesArr = JSON.parse(categoriesMatch[1])
       const siteConfigObj = siteConfigMatch ? JSON.parse(siteConfigMatch[1]) : {}
 
-      // 3. 构建新网站条目
+      // 3. 解析分类，支持动态创建
+      let resolvedCategory = (category || '').trim();
+
+      if (resolvedCategory) {
+        let foundCategoryId = null;
+        for (const cat of categoriesArr) {
+          if (cat.subcategories) {
+            const existing = cat.subcategories.find(sub => sub.name === resolvedCategory || sub.id === resolvedCategory);
+            if (existing) {
+              foundCategoryId = existing.id;
+              break;
+            }
+          }
+          if (cat.name === resolvedCategory || cat.id === resolvedCategory) {
+            foundCategoryId = cat.id;
+            break;
+          }
+        }
+
+        if (foundCategoryId) {
+          resolvedCategory = foundCategoryId;
+        } else {
+          let aiParent = categoriesArr.find(cat => cat.name === 'AI新增');
+          if (!aiParent) {
+            aiParent = {
+              id: `category_ai_${Date.now()}`,
+              name: 'AI新增',
+              icon: '/assets/____.png',
+              special: false,
+              subcategories: []
+            };
+            categoriesArr.push(aiParent);
+          }
+          if (!aiParent.subcategories) {
+            aiParent.subcategories = [];
+          }
+          const newSubCategory = {
+            id: `category_${Date.now()}`,
+            name: resolvedCategory,
+            icon: '/assets/163___.png',
+            special: false
+          };
+          aiParent.subcategories.push(newSubCategory);
+          resolvedCategory = newSubCategory.id;
+        }
+      } else {
+        resolvedCategory = categoriesArr[0]?.id || 'tools';
+      }
+
       const newWebsite = {
         id: Date.now(),
         name: name.trim(),
         description: (description || '').trim(),
         url: processedUrl,
-        category: (category || categoriesArr[0]?.id || 'tools').trim(),
+        category: resolvedCategory,
         tags: Array.isArray(tags) ? tags : (tags ? tags.split(',').map(t => t.trim()).filter(Boolean) : []),
         icon: icon || `https://icon.nbvil.com/favicon?url=${new URL(processedUrl).hostname}`
       }

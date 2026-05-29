@@ -7,9 +7,17 @@ import { useSiteConfig } from './useSiteConfig'
  * 管理后台配置管理hook
  */
 export const useAdminConfig = () => {
-  const [config, setConfig] = useState({
-    websiteData: initialWebsiteData,
-    categories: initialCategories
+  const [config, setConfig] = useState(() => {
+    const importedWebsiteData = localStorage.getItem('imported_websiteData')
+    const importedCategories = localStorage.getItem('imported_categories')
+
+    const websiteData = importedWebsiteData ? JSON.parse(importedWebsiteData) : initialWebsiteData
+    const categories = importedCategories ? JSON.parse(importedCategories) : initialCategories
+
+    if (importedWebsiteData) localStorage.removeItem('imported_websiteData')
+    if (importedCategories) localStorage.removeItem('imported_categories')
+
+    return { websiteData, categories }
   })
 
   const [isUpdating, setIsUpdating] = useState(false)
