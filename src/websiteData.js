@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/5/30 02:40:25
+// 网站数据 - 通过管理后台更新于 2026/6/24 14:31:37
 
 // 站点配置
 export const siteConfig = {
@@ -1501,6 +1501,19 @@ export const websiteData = [
       "订阅"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.yanxuan.org"
+  },
+  {
+    "id": 1782282697949,
+    "name": "搜狗翻译",
+    "description": "搜狗旗下在线翻译工具，支持文本、文档、截图翻译",
+    "url": "https://fanyi.sogou.com",
+    "category": "category_1782282697949",
+    "tags": [
+      "翻译",
+      "效率工具",
+      "在线工具"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=fanyi.sogou.com"
   }
 ];
 
@@ -1764,6 +1777,12 @@ export const categories = [
         "name": "内容订阅",
         "icon": "/assets/163___.png",
         "special": false
+      },
+      {
+        "id": "category_1782282697949",
+        "name": "效率工具",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   }
@@ -1808,5 +1827,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-05-29"
+  lastUpdated: "2026-06-24"
 };
