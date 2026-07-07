@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/6/24 14:31:37
+// 网站数据 - 通过管理后台更新于 2026/7/7 22:42:41
 
 // 站点配置
 export const siteConfig = {
@@ -1514,6 +1514,19 @@ export const websiteData = [
       "在线工具"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=fanyi.sogou.com"
+  },
+  {
+    "id": 1783435361762,
+    "name": "DeepSeek API 充值平台",
+    "description": "DeepSeek API 充值与用量管理平台",
+    "url": "https://platform.deepseek.com/usage",
+    "category": "category_1770300581787",
+    "tags": [
+      "AI",
+      "API",
+      "DeepSeek"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=platform.deepseek.com"
   }
 ];
 
@@ -1827,5 +1840,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-06-24"
+  lastUpdated: "2026-07-07"
 };
