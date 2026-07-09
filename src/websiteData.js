@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/7 22:42:41
+// 网站数据 - 通过管理后台更新于 2026/7/9 21:11:29
 
 // 站点配置
 export const siteConfig = {
@@ -1527,6 +1527,19 @@ export const websiteData = [
       "DeepSeek"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=platform.deepseek.com"
+  },
+  {
+    "id": 1783602689161,
+    "name": "CuFlow - AI 学习助手",
+    "description": "AI驱动的学习工具，上传PDF/课件自动生成思维导图、闪卡、笔记、测验",
+    "url": "https://cuflow.ai/",
+    "category": "category_1770300707942",
+    "tags": [
+      "AI工具",
+      "学习",
+      "效率"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=cuflow.ai"
   }
 ];
 
@@ -1840,5 +1853,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-07-07"
+  lastUpdated: "2026-07-09"
 };
