@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/9 21:11:29
+// 网站数据 - 通过管理后台更新于 2026/7/25 22:15:57
 
 // 站点配置
 export const siteConfig = {
@@ -522,6 +522,19 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=github.com"
   },
   {
+    "id": 1783435361762,
+    "name": "DeepSeek API 充值平台",
+    "description": "DeepSeek API 充值与用量管理平台",
+    "url": "https://platform.deepseek.com/usage",
+    "category": "category_1770300581787",
+    "tags": [
+      "AI",
+      "API",
+      "DeepSeek"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=platform.deepseek.com"
+  },
+  {
     "id": 1770301532775,
     "name": "AI Short",
     "description": "ai指令提示词库",
@@ -996,6 +1009,19 @@ export const websiteData = [
       "书源"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=langge.cf"
+  },
+  {
+    "id": 1783602689161,
+    "name": "CuFlow - AI 学习助手",
+    "description": "AI驱动的学习工具，上传PDF/课件自动生成思维导图、闪卡、笔记、测验",
+    "url": "https://cuflow.ai/",
+    "category": "category_1770300707942",
+    "tags": [
+      "AI工具",
+      "学习",
+      "效率"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=cuflow.ai"
   },
   {
     "id": 1770302178145,
@@ -1501,45 +1527,6 @@ export const websiteData = [
       "订阅"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.yanxuan.org"
-  },
-  {
-    "id": 1782282697949,
-    "name": "搜狗翻译",
-    "description": "搜狗旗下在线翻译工具，支持文本、文档、截图翻译",
-    "url": "https://fanyi.sogou.com",
-    "category": "category_1782282697949",
-    "tags": [
-      "翻译",
-      "效率工具",
-      "在线工具"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=fanyi.sogou.com"
-  },
-  {
-    "id": 1783435361762,
-    "name": "DeepSeek API 充值平台",
-    "description": "DeepSeek API 充值与用量管理平台",
-    "url": "https://platform.deepseek.com/usage",
-    "category": "category_1770300581787",
-    "tags": [
-      "AI",
-      "API",
-      "DeepSeek"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=platform.deepseek.com"
-  },
-  {
-    "id": 1783602689161,
-    "name": "CuFlow - AI 学习助手",
-    "description": "AI驱动的学习工具，上传PDF/课件自动生成思维导图、闪卡、笔记、测验",
-    "url": "https://cuflow.ai/",
-    "category": "category_1770300707942",
-    "tags": [
-      "AI工具",
-      "学习",
-      "效率"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=cuflow.ai"
   }
 ];
 
@@ -1853,5 +1840,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-07-09"
+  lastUpdated: "2026-07-25"
 };
