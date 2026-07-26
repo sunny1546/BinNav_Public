@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/25 22:15:57
+// 网站数据 - 通过管理后台更新于 2026/7/26 09:46:24
 
 // 站点配置
 export const siteConfig = {
@@ -1527,6 +1527,18 @@ export const websiteData = [
       "订阅"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.yanxuan.org"
+  },
+  {
+    "id": 1785030384701,
+    "name": "百度翻译",
+    "description": "百度翻译，支持多语种翻译",
+    "url": "https://fanyi.baidu.com/mtpe-individual/transText?ext_channel=Aldtype01#/",
+    "category": "category_1782282697949",
+    "tags": [
+      "翻译",
+      "百度"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=fanyi.baidu.com"
   }
 ];
 
@@ -1840,5 +1852,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-07-25"
+  lastUpdated: "2026-07-26"
 };
