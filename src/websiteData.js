@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/27 14:35:30
+// 网站数据 - 通过管理后台更新于 2026/7/27 20:49:26
 
 // 站点配置
 export const siteConfig = {
@@ -1553,6 +1553,20 @@ export const websiteData = [
       "免费书籍"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.bookstack.cn"
+  },
+  {
+    "id": 1785156566923,
+    "name": "MiniMax API 开放平台",
+    "description": "MiniMax API充值入口，开发者控制台套餐购买",
+    "url": "https://platform.minimaxi.com/console/plan",
+    "category": "category_1751807929795",
+    "tags": [
+      "AI",
+      "MiniMax",
+      "API",
+      "AI编程"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=platform.minimaxi.com"
   }
 ];
 
