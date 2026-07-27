@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/28 00:14:26
+// 网站数据 - 通过管理后台更新于 2026/7/28 00:52:27
 
 // 站点配置
 export const siteConfig = {
@@ -1582,6 +1582,22 @@ export const websiteData = [
       "云开发"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=console.cloud.tencent.com"
+  },
+  {
+    "id": 1785171147733,
+    "name": "PixPin",
+    "description": "截图标注工具，支持长截图、马赛克、箭头、文字标注等",
+    "url": "https://pixpinapp.com/",
+    "category": "category_1770300613701",
+    "tags": [
+      "截图",
+      "标注",
+      "效率工具",
+      "长截图",
+      "马赛克",
+      "工具"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=pixpinapp.com"
   }
 ];
 
