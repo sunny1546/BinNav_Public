@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/26 09:46:24
+// 网站数据 - 通过管理后台更新于 2026/7/27 14:35:30
 
 // 站点配置
 export const siteConfig = {
@@ -1539,6 +1539,20 @@ export const websiteData = [
       "百度"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=fanyi.baidu.com"
+  },
+  {
+    "id": 1785134130242,
+    "name": "书栈网 BookStack",
+    "description": "程序员IT互联网开源编程书籍免费阅读，助您码力十足",
+    "url": "https://www.bookstack.cn/",
+    "category": "category_1785134130242",
+    "tags": [
+      "编程书籍",
+      "在线阅读",
+      "IT书籍",
+      "免费书籍"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.bookstack.cn"
   }
 ];
 
@@ -1808,6 +1822,12 @@ export const categories = [
         "name": "效率工具",
         "icon": "/assets/163___.png",
         "special": false
+      },
+      {
+        "id": "category_1785134130242",
+        "name": "在线阅读",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   }
@@ -1852,5 +1872,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-07-26"
+  lastUpdated: "2026-07-27"
 };
