@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/27 20:49:26
+// 网站数据 - 通过管理后台更新于 2026/7/28 00:14:26
 
 // 站点配置
 export const siteConfig = {
@@ -1567,6 +1567,21 @@ export const websiteData = [
       "AI编程"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=platform.minimaxi.com"
+  },
+  {
+    "id": 1785168866039,
+    "name": "EdgeOne Pages 国内版",
+    "description": "腾讯云 EdgeOne Pages 国内版控制台，部署静态网站和全栈应用",
+    "url": "https://console.cloud.tencent.com/edgeone/makers",
+    "category": "category_1785168866039",
+    "tags": [
+      "腾讯云",
+      "EdgeOne",
+      "Pages",
+      "静态部署",
+      "云开发"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=console.cloud.tencent.com"
   }
 ];
 
@@ -1840,6 +1855,12 @@ export const categories = [
       {
         "id": "category_1785134130242",
         "name": "在线阅读",
+        "icon": "/assets/163___.png",
+        "special": false
+      },
+      {
+        "id": "category_1785168866039",
+        "name": "云计算",
         "icon": "/assets/163___.png",
         "special": false
       }
