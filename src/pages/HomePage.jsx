@@ -365,7 +365,7 @@ function HomePage() {
               )}
 
               {/* 分类展示 - 有搜索结果时隐藏；移动端搜索框聚焦时也隐藏 */}
-              <div className={`${searchTerm || isSearchFocused ? 'hidden md:block' : ''} ${searchTerm ? 'md:hidden' : ''}`}>
+              <div className={`space-y-12 ${searchTerm || isSearchFocused ? 'hidden md:block' : ''} ${searchTerm ? 'md:hidden' : ''}`}>
                 {!searchTerm && categories.map((category) => {
                 if (category.subcategories && category.subcategories.length > 0) {
                   return (
@@ -376,7 +376,7 @@ function HomePage() {
                         
                         return (
                           <section key={subcat.id} ref={el => sectionRefs.current[subcat.id] = el} className="scroll-mt-20">
-                            <div className="flex items-center mb-6">
+                            <div className="flex items-center mb-8 mt-0 first:mt-0">
                               <img
                                 src={subcat.icon}
                                 alt=""
@@ -405,7 +405,7 @@ function HomePage() {
                   
                   return (
                     <section key={category.id} ref={el => sectionRefs.current[category.id] = el} className="scroll-mt-20">
-                      <div className="flex items-center mb-6">
+                      <div className="flex items-center mb-8 mt-0">
                         <img 
                           src={category.icon} 
                           alt="" 
