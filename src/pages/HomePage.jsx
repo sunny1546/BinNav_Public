@@ -15,6 +15,7 @@ function HomePage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [expandedCategories, setExpandedCategories] = useState({})
   const [showSubmitForm, setShowSubmitForm] = useState(false)
+  const [isSearchFocused, setIsSearchFocused] = useState(false)
   const mainContentRef = useRef(null)
   const sectionRefs = useRef({})
   
@@ -172,7 +173,14 @@ function HomePage() {
                     type="text"
                     placeholder="站内搜索..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => {
+                      setSearchTerm(e.target.value)
+                      if (e.target.value.trim()) {
+                        setTimeout(() => setIsSidebarOpen(false), 300)
+                      }
+                    }}
+                    onFocus={() => setIsSearchFocused(true)}
+                    onBlur={() => setIsSearchFocused(false)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' && searchTerm.trim()) {
                         setIsSidebarOpen(false)
@@ -180,6 +188,18 @@ function HomePage() {
                     }}
                     className="pl-10 h-10 border-gray-300 focus:border-blue-500 focus:ring-blue-500 w-full"
                   />
+                  {searchTerm && (
+                    <button
+                      onClick={() => {
+                        setSearchTerm('')
+                        setIsSidebarOpen(false)
+                      }}
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
+                      type="button"
+                    >
+                      <X size={16} />
+                    </button>
+                  )}
                 </div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20 p-6">
@@ -294,25 +314,59 @@ function HomePage() {
 
           {/* 主内容区域 */}
           <main className="flex-1" ref={mainContentRef}>
+            {/* 移动端主搜索框 - 无需打开侧边栏即可搜索 */}
+            <div className="md:hidden mb-6">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                <Input
+                  type="text"
+                  placeholder="🔍 站内搜索 - 试试输入'设计工具'..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onFocus={() => setIsSearchFocused(true)}
+                  onBlur={() => setIsSearchFocused(false)}
+                  className="pl-10 h-12 border-gray-300 focus:border-blue-500 focus:ring-blue-500 w-full text-base"
+                />
+                {searchTerm && (
+                  <button
+                    onClick={() => setSearchTerm('')}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
+                    type="button"
+                  >
+                    <X size={16} />
+                  </button>
+                )}
+              </div>
+            </div>
+
             <div className="space-y-12">
               {/* 搜索结果 */}
               {searchTerm && (
-                <section className="scroll-mt-20">
+                <section className="scroll-mt-20 binnav-fade-in">
                   <div className="flex items-center mb-6">
                     <Search className="w-8 h-8 mr-4 text-blue-600" />
                     <h2 className="text-xl font-bold text-gray-900">搜索结果</h2>
                     <span className="ml-4 text-base text-gray-500">找到 {filteredWebsites.length} 个结果</span>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {filteredWebsites.map((website) => (
-                      <WebsiteCard key={website.id} website={website} />
-                    ))}
-                  </div>
+                  {filteredWebsites.length === 0 ? (
+                    <div className="text-center py-12 bg-white/80 rounded-2xl border border-gray-200">
+                      <div className="text-5xl mb-4">🔍</div>
+                      <div className="text-gray-500 text-lg mb-2">没有找到相关网站</div>
+                      <div className="text-gray-400 text-sm">换个关键词试试吧～</div>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {filteredWebsites.map((website) => (
+                        <WebsiteCard key={website.id} website={website} />
+                      ))}
+                    </div>
+                  )}
                 </section>
               )}
 
-              {/* 分类展示 */}
-              {!searchTerm && categories.map((category) => {
+              {/* 分类展示 - 有搜索结果时隐藏；移动端搜索框聚焦时也隐藏 */}
+              <div className={`${searchTerm || isSearchFocused ? 'hidden md:block' : ''} ${searchTerm ? 'md:hidden' : ''}`}>
+                {!searchTerm && categories.map((category) => {
                 if (category.subcategories && category.subcategories.length > 0) {
                   return (
                     <div key={category.id} className="space-y-12">
@@ -373,6 +427,7 @@ function HomePage() {
                   )
                 }
               })}
+              </div>
             </div>
 
 
