@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/7/28 00:52:27
+// 网站数据 - 通过管理后台更新于 2026/8/6 21:03:09
 
 // 站点配置
 export const siteConfig = {
@@ -1598,6 +1598,15 @@ export const websiteData = [
       "工具"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=pixpinapp.com"
+  },
+  {
+    "id": 1786021389502,
+    "name": "阿里云百炼模型市场",
+    "description": "阿里云百炼AI模型市场，集成通义千问等大模型API",
+    "url": "https://bailian.console.aliyun.com/cn-beijing?tab=model#/model-market",
+    "category": "category_ai_1780080025761",
+    "tags": [],
+    "icon": "https://icon.nbvil.com/favicon?url=bailian.console.aliyun.com"
   }
 ];
 
@@ -1923,5 +1932,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-07-27"
+  lastUpdated: "2026-08-06"
 };
