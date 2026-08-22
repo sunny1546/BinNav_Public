@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/8/6 21:03:09
+// 网站数据 - 通过管理后台更新于 2026/8/22 16:42:16
 
 // 站点配置
 export const siteConfig = {
@@ -68,6 +68,18 @@ export const websiteData = [
       "vibe coding"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.an46.us.kg"
+  },
+  {
+    "id": 1787388127829,
+    "name": "openclaw-小梦",
+    "description": "我在腾讯云搭建的openclaw",
+    "url": "https://lightagent.cloud.tencent.com/?id=lhins-ryptoj2b&agentId=main",
+    "category": "category_1772934696506",
+    "tags": [
+      "AI",
+      "openclaw"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1772934933612,
@@ -451,6 +463,20 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=fmhy.net"
   },
   {
+    "id": 1785156566923,
+    "name": "MiniMax API 开放平台",
+    "description": "MiniMax API充值入口，开发者控制台套餐购买",
+    "url": "https://platform.minimaxi.com/console/plan",
+    "category": "category_1751807929795",
+    "tags": [
+      "AI",
+      "MiniMax",
+      "API",
+      "AI编程"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=platform.minimaxi.com"
+  },
+  {
     "id": 1770301391071,
     "name": "Claude",
     "description": "由 Anthropic 开发的先进AI助手，专为开发者打造，擅长代码生成、调试建议和技术问题解答",
@@ -652,6 +678,22 @@ export const websiteData = [
       "API接口"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.tiangong.cn"
+  },
+  {
+    "id": 1785171147733,
+    "name": "PixPin",
+    "description": "截图标注工具，支持长截图、马赛克、箭头、文字标注等",
+    "url": "https://pixpinapp.com/",
+    "category": "category_1770300613701",
+    "tags": [
+      "截图",
+      "标注",
+      "效率工具",
+      "长截图",
+      "马赛克",
+      "工具"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=pixpinapp.com"
   },
   {
     "id": 1770301616410,
@@ -1516,6 +1558,15 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=tiger-sms.com"
   },
   {
+    "id": 1786021389502,
+    "name": "阿里云百炼模型市场",
+    "description": "阿里云百炼AI模型市场，集成通义千问等大模型API",
+    "url": "https://bailian.console.aliyun.com/cn-beijing?tab=model#/model-market",
+    "category": "category_ai_1780080025761",
+    "tags": [],
+    "icon": "https://icon.nbvil.com/favicon?url=bailian.console.aliyun.com"
+  },
+  {
     "id": 1780080025761,
     "name": "盐选",
     "description": "盐选内容订阅平台，提供付费会员专属优质内容资源",
@@ -1555,20 +1606,6 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=www.bookstack.cn"
   },
   {
-    "id": 1785156566923,
-    "name": "MiniMax API 开放平台",
-    "description": "MiniMax API充值入口，开发者控制台套餐购买",
-    "url": "https://platform.minimaxi.com/console/plan",
-    "category": "category_1751807929795",
-    "tags": [
-      "AI",
-      "MiniMax",
-      "API",
-      "AI编程"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=platform.minimaxi.com"
-  },
-  {
     "id": 1785168866039,
     "name": "EdgeOne Pages 国内版",
     "description": "腾讯云 EdgeOne Pages 国内版控制台，部署静态网站和全栈应用",
@@ -1582,31 +1619,6 @@ export const websiteData = [
       "云开发"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=console.cloud.tencent.com"
-  },
-  {
-    "id": 1785171147733,
-    "name": "PixPin",
-    "description": "截图标注工具，支持长截图、马赛克、箭头、文字标注等",
-    "url": "https://pixpinapp.com/",
-    "category": "category_1770300613701",
-    "tags": [
-      "截图",
-      "标注",
-      "效率工具",
-      "长截图",
-      "马赛克",
-      "工具"
-    ],
-    "icon": "https://icon.nbvil.com/favicon?url=pixpinapp.com"
-  },
-  {
-    "id": 1786021389502,
-    "name": "阿里云百炼模型市场",
-    "description": "阿里云百炼AI模型市场，集成通义千问等大模型API",
-    "url": "https://bailian.console.aliyun.com/cn-beijing?tab=model#/model-market",
-    "category": "category_ai_1780080025761",
-    "tags": [],
-    "icon": "https://icon.nbvil.com/favicon?url=bailian.console.aliyun.com"
   }
 ];
 
@@ -1932,5 +1944,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-08-06"
+  lastUpdated: "2026-08-22"
 };
