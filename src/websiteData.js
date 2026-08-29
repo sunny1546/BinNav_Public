@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/8/30 01:25:17
+// 网站数据 - 通过管理后台更新于 2026/8/30 01:32:24
 
 // 站点配置
 export const siteConfig = {
@@ -1642,6 +1642,15 @@ export const websiteData = [
     "category": "author",
     "tags": [],
     "icon": "https://icon.nbvil.com/favicon?url=www.tgzhidao.com"
+  },
+  {
+    "id": 1788024744328,
+    "name": "XMRTH 机场",
+    "description": "科学上网机场服务",
+    "url": "https://www.xmrth.lol/",
+    "category": "author",
+    "tags": [],
+    "icon": "https://icon.nbvil.com/favicon?url=www.xmrth.lol"
   }
 ];
 
