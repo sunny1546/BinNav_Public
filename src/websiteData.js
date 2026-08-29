@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/8/30 00:13:48
+// 网站数据 - 通过管理后台更新于 2026/8/30 01:25:17
 
 // 站点配置
 export const siteConfig = {
@@ -1633,6 +1633,15 @@ export const websiteData = [
       "导航"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=www.tgnav.org"
+  },
+  {
+    "id": 1788024317319,
+    "name": "TG知识 - TG频道搜索",
+    "description": "TG频道搜索工具",
+    "url": "https://www.tgzhidao.com/",
+    "category": "author",
+    "tags": [],
+    "icon": "https://icon.nbvil.com/favicon?url=www.tgzhidao.com"
   }
 ];
 
