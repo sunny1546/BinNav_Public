@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/8/22 16:42:16
+// 网站数据 - 通过管理后台更新于 2026/8/30 00:13:48
 
 // 站点配置
 export const siteConfig = {
@@ -1619,6 +1619,20 @@ export const websiteData = [
       "云开发"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=console.cloud.tencent.com"
+  },
+  {
+    "id": 1788020028498,
+    "name": "TG导航 - TG频道搜索",
+    "description": "Telegram 频道搜索导航站，可搜索、发现各类 TG 频道与群组",
+    "url": "https://www.tgnav.org/",
+    "category": "category_1788020028498",
+    "tags": [
+      "Telegram",
+      "TG频道",
+      "搜索",
+      "导航"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=www.tgnav.org"
   }
 ];
 
@@ -1900,6 +1914,12 @@ export const categories = [
         "name": "云计算",
         "icon": "/assets/163___.png",
         "special": false
+      },
+      {
+        "id": "category_1788020028498",
+        "name": "TG工具",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   }
@@ -1944,5 +1964,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-08-22"
+  lastUpdated: "2026-08-29"
 };
