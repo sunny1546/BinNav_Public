@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/8/30 01:32:24
+// 网站数据 - 通过管理后台更新于 2026/8/31 14:44:12
 
 // 站点配置
 export const siteConfig = {
@@ -1651,6 +1651,19 @@ export const websiteData = [
     "category": "author",
     "tags": [],
     "icon": "https://icon.nbvil.com/favicon?url=www.xmrth.lol"
+  },
+  {
+    "id": 1788158652612,
+    "name": "清华大学开源软件镜像站",
+    "description": "清华 TUNA 开源软件镜像站，国内高速开源软件/系统镜像",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/",
+    "category": "category_1788158652612",
+    "tags": [
+      "镜像源",
+      "开源",
+      "下载"
+    ],
+    "icon": "https://icon.nbvil.com/favicon?url=mirrors.tuna.tsinghua.edu.cn"
   }
 ];
 
@@ -1938,6 +1951,12 @@ export const categories = [
         "name": "TG工具",
         "icon": "/assets/163___.png",
         "special": false
+      },
+      {
+        "id": "category_1788158652612",
+        "name": "工具资源",
+        "icon": "/assets/163___.png",
+        "special": false
       }
     ]
   }
@@ -1982,5 +2001,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-08-29"
+  lastUpdated: "2026-08-31"
 };
