@@ -1,4 +1,4 @@
-// 网站数据 - 通过管理后台更新于 2026/8/31 14:44:12
+// 网站数据 - 通过管理后台更新于 2026/10/1 20:31:25
 
 // 站点配置
 export const siteConfig = {
@@ -13,6 +13,24 @@ export const siteConfig = {
 };
 
 export const websiteData = [
+  {
+    "id": 1788024317319,
+    "name": "TG知识 - TG频道搜索",
+    "description": "TG频道搜索工具",
+    "url": "https://www.tgzhidao.com/",
+    "category": "author",
+    "tags": [],
+    "icon": "https://icon.nbvil.com/favicon?url=www.tgzhidao.com"
+  },
+  {
+    "id": 1788024744328,
+    "name": "XMRTH 机场",
+    "description": "科学上网机场服务",
+    "url": "https://www.xmrth.lol/",
+    "category": "author",
+    "tags": [],
+    "icon": "https://icon.nbvil.com/favicon?url=www.xmrth.lol"
+  },
   {
     "id": 1770626412964,
     "name": "Obsidian",
@@ -417,6 +435,19 @@ export const websiteData = [
       "网盘搜索"
     ],
     "icon": "https://icon.nbvil.com/favicon?url=laoer.motewan.com"
+  },
+  {
+    "id": 1790857881328,
+    "name": "KK小站",
+    "description": "夸克网盘搜索站",
+    "url": "https://www.pioz.cn/",
+    "category": "category_1770300523587",
+    "tags": [
+      "夸克网盘",
+      "电视剧",
+      "资源"
+    ],
+    "icon": "/assets/logo.png"
   },
   {
     "id": 1770301322263,
@@ -1635,24 +1666,6 @@ export const websiteData = [
     "icon": "https://icon.nbvil.com/favicon?url=www.tgnav.org"
   },
   {
-    "id": 1788024317319,
-    "name": "TG知识 - TG频道搜索",
-    "description": "TG频道搜索工具",
-    "url": "https://www.tgzhidao.com/",
-    "category": "author",
-    "tags": [],
-    "icon": "https://icon.nbvil.com/favicon?url=www.tgzhidao.com"
-  },
-  {
-    "id": 1788024744328,
-    "name": "XMRTH 机场",
-    "description": "科学上网机场服务",
-    "url": "https://www.xmrth.lol/",
-    "category": "author",
-    "tags": [],
-    "icon": "https://icon.nbvil.com/favicon?url=www.xmrth.lol"
-  },
-  {
     "id": 1788158652612,
     "name": "清华大学开源软件镜像站",
     "description": "清华 TUNA 开源软件镜像站，国内高速开源软件/系统镜像",
@@ -2001,5 +2014,5 @@ export const siteStats = {
   totalSites: websiteData.length,
   totalCategories: categories.length,
   totalTags: [...new Set(websiteData.flatMap(site => site.tags || []))].length,
-  lastUpdated: "2026-08-31"
+  lastUpdated: "2026-10-01"
 };
