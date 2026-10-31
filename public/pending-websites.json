@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "1793481054483",
+    "name": "Doc2X",
+    "url": "https://doc2x.noedgeai.com/",
+    "description": "在线解析PDF和图片，识别文字、公式与表格，导出Word、Markdown、LaTeX。提供免费额度及付费服务，完整功能需登录。",
+    "category": "category_1782282697949",
+    "tags": "PDF,OCR,文档解析",
+    "contactEmail": "support@noedgeai.com",
+    "submitterName": "",
+    "status": "pending",
+    "submittedAt": "2026-10-31T21:10:54.483Z"
+  }
+]
