@@ -10,5 +10,17 @@
     "submitterName": "",
     "status": "pending",
     "submittedAt": "2026-10-31T21:10:54.483Z"
+  },
+  {
+    "id": "1795031334496",
+    "name": "MoeRouter",
+    "url": "https://moerouter.com/",
+    "description": "面向开发者的多模型 API 网关，统一调用 Claude、GPT 和 Gemini，按线路可用性选路、按实际用量以人民币计费。",
+    "category": "category_1770300581787",
+    "tags": "模型 API,开发者工具",
+    "contactEmail": "support@doc2x.com",
+    "submitterName": "",
+    "status": "pending",
+    "submittedAt": "2026-11-18T19:48:54.496Z"
   }
 ]
